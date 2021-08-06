@@ -1,0 +1,47 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile Markdown New",
+            "type": "shell",
+            "options": {
+                    "cwd": "${fileDirname}"
+            },
+            "command": "pandoc --metadata title=\"${fileBasenameNoExtension}\" -c \"dark-theme.css\" --toc  --self-contained \"${fileBasename}\" -o \"${fileBasenameNoExtension}.html\"",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "cmdR-1",
+            "command": "${command:workbench.action.toggleMaximizedPanel}"
+        },
+        {
+            "label": "cmdR-2",
+            "command": "${command:workbench.action.terminal.focus}"
+        },
+        {
+            "label": "cmdR-3",
+            "command": "${command:workbench.action.focusActiveEditorGroup}"
+        },
+        {
+            "label": "cmdR-All",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "cmdR-1",
+                "cmdR-2"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "cmdR-All-alt",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "cmdR-1",
+                "cmdR-3"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

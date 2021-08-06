@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: rmarkdown-html-template
+# key: `html
+# --
+
+---
+title: ""
+date: 
+output:
+  html_document:
+    theme: united
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 3 
+    number_sections: false
+---

@@ -1,0 +1,316 @@
+{
+    "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+
+    "editor.renderWhitespace": "boundary",
+    "editor.cursorSurroundingLines": 10,
+    "editor.minimap.maxColumn": 40,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.wordWrap": "wordWrapColumn",
+
+    "terminal.integrated.cwd": "",
+
+    "window.openFoldersInNewWindow": "on",
+    "window.restoreWindows": "preserve",
+    "window.titleBarStyle": "native",
+
+    "workbench.activityBar.visible": false,
+
+    "markdown.preview.scrollPreviewWithEditor": true,
+    "markdown.preview.scrollEditorWithPreview": true,
+
+    "[plaintext]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 80,
+        "editor.wordBasedSuggestions": false,
+    },
+    "[org]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 80,
+        "editor.wordBasedSuggestions": false,
+    },
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 80,
+        "editor.wordBasedSuggestions": false,
+    },
+
+    "vim.useSystemClipboard": true,
+    "vim.foldfix": true,
+    "vim.whichwrap": "h,l,<,>,[,]",
+    "vim.handleKeys": {
+        "<C-c>": false,
+        "<C-s>": false,
+        "<C-S>": false,
+        "<C-w>": false,
+        "<C-f>": false,
+        "<C-t>": false,
+        "<C-n>": false,
+        "<C-u>": false,
+        "<C-i>": false,
+        "<Enter>": false
+    },
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["J"],
+            "after": ["j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j"]
+        },
+        {
+            "before": ["K"],
+            "after": ["k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k"]
+        },
+        {
+            "before": ["<Space>"],
+            "commands": ["editor.toggleFold"],
+        },
+        {
+            "before": ["g", "u"],
+            "commands": ["workbench.action.previousEditor"],
+        },
+        {
+            "before": ["g", "i"],
+            "commands": ["workbench.action.nextEditor"],
+        },
+        {
+            "before": ["g", "h"],
+            "commands": ["workbench.action.navigateLeft"],
+        },
+        {
+            "before": ["g", "l"],
+            "commands": ["workbench.action.navigateRight"],
+        },
+        {
+            "before": ["g", "j"],
+            "commands": ["workbench.action.navigateDown"],
+        },
+        {
+            "before": ["g", "k"],
+            "commands": ["workbench.action.navigateUp"],
+        },
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["k", "j"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+
+    "pasteImage.defaultName":"[image-]YYYYMMDDHHmmss",
+    "pasteImage.insertPattern": "<img src=\"${currentFileName}-media/${imageFileName}\" alt=\"drawing\" width=\"50\" />",
+    "pasteImage.path": "${currentFileDir}/${currentFileName}-media",
+    "pasteImage.basePath": "${currentFileDir}",
+    "pasteImage.forceUnixStyleSeparator": true,
+
+    "editor.renderControlCharacters": false,
+
+
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+
+    "bracket-pair-colorizer-2.colors": [
+        "LightSkyBlue",
+        "Gold",
+        "Lime",
+        "Orchid"
+    ],
+    "bracket-pair-colorizer-2.showVerticalScopeLine": false,
+    "bracket-pair-colorizer-2.showHorizontalScopeLine": false,
+
+    "indentRainbow.excludedLanguages": [
+        "plaintext",
+        "org"
+    ],
+    "explorer.confirmDelete": false,
+
+    "cSpell.enabled": true,
+    "cSpell.spellCheckDelayMs": 50,
+    "cSpell.showStatus": true,
+    "cSpell.allowCompoundWords": false,
+    "cSpell.language": "en",
+    "cSpell.maxNumberOfProblems": 100,
+    "cSpell.numSuggestions": 8,
+    "cSpell.minWordLength": 4,
+    "cSpell.enabledLanguageIds": [
+        "csharp",
+        "go",
+        "javascript",
+        "javascriptreact",
+        "markdown",
+        "php",
+        "plaintext",
+        "typescript",
+        "typescriptreact",
+        "yml"
+    ],
+    "cSpell.ignorePaths": [
+        "node_modules",
+        "vscode-extension",
+        ".git",
+        "*.dll",
+    ],
+    "cSpell.userWords": [
+        "Artix",
+        "BTFO",
+        "Brainz",
+        "DLNA",
+        "Decentraleyes",
+        "EXIF",
+        "FEMA",
+        "Gitlab",
+        "HAXM",
+        "Inkscape",
+        "Intellij",
+        "Jellyfin",
+        "Kdenlive",
+        "Keepass",
+        "Ksnip",
+        "LARPing",
+        "Libet",
+        "Lynnfield",
+        "MELPA",
+        "MSVC",
+        "MSVCC",
+        "Macbook",
+        "Mixxx",
+        "Msys",
+        "NLVE",
+        "NSSM",
+        "Nullpomino",
+        "Okular",
+        "PDFs",
+        "POSIX",
+        "Pathing",
+        "Pavucontrol",
+        "Plex",
+        "Podder",
+        "Pomotroid",
+        "Postgresql",
+        "Prereqs",
+        "Puyo",
+        "Qalculate",
+        "RDBMS",
+        "Redist",
+        "Retroarch",
+        "Syuu",
+        "Tesseract",
+        "Tetris",
+        "Texlive",
+        "VPNs",
+        "Ventoy",
+        "Veracrypt",
+        "Vimium",
+        "Virtualbox",
+        "Wayback",
+        "Wireshark",
+        "XMPP",
+        "Xournalpp",
+        "Youtube",
+        "Zenmap",
+        "alsa",
+        "andotp",
+        "azuread",
+        "backdoors",
+        "bitwarden",
+        "bytecode",
+        "centos",
+        "cicd",
+        "circleci",
+        "codium",
+        "commandline",
+        "cybersec",
+        "ddos",
+        "desaturation",
+        "devuan",
+        "directx",
+        "distros",
+        "dockerfiles",
+        "doxygen",
+        "exiftool",
+        "fakeroot",
+        "freetube",
+        "gifs",
+        "gitea",
+        "graalvm",
+        "graphene",
+        "hashicorp",
+        "hostable",
+        "ipkvm",
+        "jdbc",
+        "jpackage",
+        "karabiner",
+        "keybind",
+        "keychain",
+        "laravel",
+        "livestreaming",
+        "losslessly",
+        "macos",
+        "memdbg",
+        "mspaint",
+        "multiboot",
+        "nextcloud",
+        "nikes",
+        "nvim",
+        "osascript",
+        "overcommit",
+        "pacman",
+        "pandoc",
+        "pdftk",
+        "pomodoro",
+        "pulseaudio",
+        "pyside",
+        "qbittorrent",
+        "qdirstat",
+        "rclone",
+        "replaygain",
+        "rssguard",
+        "rtti",
+        "runtimes",
+        "sharepoint",
+        "stdlib",
+        "sxhkd",
+        "syncplay",
+        "syncthing",
+        "sysinternal",
+        "testdisk",
+        "travisci",
+        "ublock",
+        "vscodium",
+        "wincdemu",
+        "windirstat",
+        "winrm",
+        "winscp",
+        "yandere"
+    ],
+    "editor.accessibilitySupport": "off",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.useWebExt": true,
+    "php.validate.executablePath": "C:\\bin-programs\\php\\php8.0.8\\php.exe",
+    "php.validate.run": "onType",
+    "workbench.editor.untitled.hint": "hidden",
+    "security.workspace.trust.untrustedFiles": "open",
+}
