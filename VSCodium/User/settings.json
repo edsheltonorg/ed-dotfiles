@@ -1,4 +1,7 @@
 {
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+
     "files.autoSave": "onFocusChange",
     "files.trimTrailingWhitespace": true,
 
@@ -181,12 +184,16 @@
         "Decentraleyes",
         "EXIF",
         "FEMA",
+        "Avaya",
         "Gitlab",
         "Graphviz",
         "HAXM",
         "Inkscape",
         "Intellij",
         "Jellyfin",
+        "Intune",
+        "Konica",
+        "Meraki",
         "Kdenlive",
         "Keepass",
         "Krita",
@@ -200,6 +207,7 @@
         "Macbook",
         "Mixxx",
         "Msys",
+        "Monolta",
         "NLVE",
         "NSSM",
         "Nullpomino",
@@ -220,20 +228,25 @@
         "Restic",
         "Retroarch",
         "Syuu",
+        "SNMP",
+        "Sharepoint",
         "Tesseract",
         "Tetris",
         "Texlive",
+        "Unmanaged",
         "VPNs",
         "Ventoy",
         "Veracrypt",
         "Vimium",
         "Virtualbox",
+        "Visio",
         "Wayback",
         "Wireshark",
         "XMPP",
         "Xournalpp",
         "Youtube",
         "Zenmap",
+        "adhd",
         "alsa",
         "andotp",
         "azuread",
@@ -271,6 +284,9 @@
         "keybind",
         "keychain",
         "laravel",
+        "libapache",
+        "libgd",
+        "libssl",
         "livestreaming",
         "losslessly",
         "macos",
@@ -304,6 +320,8 @@
         "testdisk",
         "travisci",
         "ublock",
+        "telehealth",
+        "usermod",
         "vscodium",
         "wincdemu",
         "windirstat",
@@ -318,5 +336,33 @@
     "php.validate.executablePath": "C:\\bin-programs\\php\\php8.0.8\\php.exe",
     "php.validate.run": "onType",
     "workbench.editor.untitled.hint": "hidden",
+
+    "[powershell]": {
+        "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+        "editor.semanticHighlighting.enabled": false,
+        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+    },
+    "editor.fontSize": 12,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell",
+            "args": ["-nologo"]
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "powershell.integratedConsole.suppressStartupBanner": true,
+
     "security.workspace.trust.untrustedFiles": "open",
 }
