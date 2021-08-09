@@ -1,6 +1,6 @@
 # run as admin -or- user must be granted symlink permissions & re-login.
 
-# DO NOT backup SSH, GNUPG, OPENVPN, or other dirs that may contain secrets.
+# DO NOT include SSH, GNUPG, OPENVPN, or other dirs that may contain secrets.
 # ALWAYS check for personal information in config files before pushing to a SVN.
 
 # folder containing real dotfiles
@@ -34,7 +34,7 @@ dploy link `
     "$d_mpvnet\mpv.conf" `
     "$c_mpvnet\mpv.conf"
 
-# Powershell Config
+# powershell config
 $d_powershell = "$d_dir\WindowsPowerShell"
 $c_powershell = "$HOME\Documents\WindowsPowerShell"
 
@@ -78,6 +78,14 @@ dploy link `
     "$d_gpodder\Settings.json" `
     "$HOME\Documents\gPodder\Settings.json"
 
+# xournalpp
+$d_xournalpp = "$d_dir\xournalpp"
+$c_xournalpp = "$ENV:ProgramFiles\Xournal++"
+
+dploy link `
+    "$d_xournalpp\settings.ini" `
+    "$c_xournalpp\etc\gtk-3.0\settings.ini"
+
 # retroarch
 $d_retroarch = "$d_dir\retroarch"
 $c_retroarch = "$env:HOMEDRIVE\RetroArch-Win64"
@@ -91,3 +99,19 @@ dploy link `
 dploy link `
     "$d_retroarch\saves" `
     "$c_retroarch\saves"
+
+# autohotkey
+$d_ahk = "$d_dir\ahk"
+$c_ahk = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
+
+dploy link `
+    "$d_ahk\binds.ahk" `
+    "$c_ahk\binds.ahk"
+
+# windows terminal
+$d_wt = "$d_dir\wt"
+$c_wt = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe"
+
+dploy link `
+    "$d_wt" `
+    "$c_wt\LocalState"

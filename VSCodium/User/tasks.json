@@ -9,7 +9,35 @@
             "options": {
                     "cwd": "${fileDirname}"
             },
-            "command": "pandoc --metadata title=\"${fileBasenameNoExtension}\" -c \"dark-theme.css\" --toc  --self-contained \"${fileBasename}\" -o \"${fileBasenameNoExtension}.html\"",
+            "command": "pandoc",
+            "args": [
+                "-c", "dark-theme.css",
+                "--metadata", "title=\"${fileBasenameNoExtension}\"",
+                "--toc",
+                "--self-contained",
+                "${fileBasename}",
+                "-o", "${fileBasenameNoExtension}.html"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Compile Beamer New",
+            "type": "shell",
+            "options": {
+                    "cwd": "${fileDirname}"
+            },
+            "command": "pandoc",
+            "args": [
+                "-H", "style.pandoc",
+                "--pdf-engine=xelatex",
+                "-t", "beamer",
+                "-V", "fontsize=12pt",
+                "--slide-level", "2",
+                "-f", "markdown+implicit_figures",
+                "${fileBasename}",
+                "-o", "${fileBasenameNoExtension}.pdf",
+            ],
             "group": "build",
             "problemMatcher": []
         },
