@@ -3,115 +3,163 @@
 # DO NOT include SSH, GNUPG, OPENVPN, or other dirs that may contain secrets.
 # ALWAYS check for personal information in config files before pushing to a SVN.
 
+# Check if path is symlinked, if not then delete / create dir to desired path.
+function PathAndLink {
+    param (
+        # real system config path
+        [string]$cpath,
+        # dotfile path
+        [string]$dpath
+    )
+    $symtest = get-item $cpath -ErrorAction SilentlyContinue
+    if (!($symtest)) {
+        $dir = split-path $cpath
+        echo "'$cpath' not found! Creating '$dir' path and symlinking '$dpath'"
+        mkdir -Force $dir > $null
+        dploy link $dpath $cpath
+    }
+    elseif (($symtest.LinkType -eq "SymbolicLink") -eq $false) {
+        $input = Read-Host "'$cpath' is real and exists! Delete? (y/n)"
+        switch ($input) {
+            y {
+                rm -Recurse -Force $cpath
+                dploy link $dpath $cpath
+            }
+            Default {}
+        }
+    }
+    else {
+        echo "'$cpath' already symlinked!"
+    }
+}
+
 # folder containing real dotfiles
 $d_dir = "$HOME\dotfiles"
 
 # vscodium
-$d_vscodium = "$d_dir\VSCodium"
 $c_vscodium = "$env:APPDATA\VSCodium"
+$d_vscodium = "$d_dir\VSCodium"
 
-dploy link `
-    "$d_vscodium\User\snippets\" `
-    "$c_vscodium\User\snippets\"
-dploy link `
-    "$d_vscodium\User\keybindings.json" `
-    "$c_vscodium\User\keybindings.json"
-dploy link `
-    "$d_vscodium\User\settings.json" `
-    "$c_vscodium\User\settings.json"
-dploy link `
-    "$d_vscodium\User\tasks.json" `
-    "$c_vscodium\User\tasks.json"
+PathAndLink `
+    "$c_vscodium\User\snippets\" `
+    "$d_vscodium\User\snippets\"
+PathAndLink `
+    "$c_vscodium\User\keybindings.json" `
+    "$d_vscodium\User\keybindings.json"
+PathAndLink `
+    "$c_vscodium\User\settings.json" `
+    "$d_vscodium\User\settings.json"
+PathAndLink `
+    "$c_vscodium\User\tasks.json" `
+    "$d_vscodium\User\tasks.json"
 
 # mpvnet
-$d_mpvnet = "$d_dir\mpv.net"
 $c_mpvnet = "$env:APPDATA\mpv.net"
+$d_mpvnet = "$d_dir\mpv.net"
 
-dploy link `
-    "$d_mpvnet\input.conf" `
-    "$c_mpvnet\input.conf"
-dploy link `
-    "$d_mpvnet\mpv.conf" `
-    "$c_mpvnet\mpv.conf"
+PathAndLink `
+    "$c_mpvnet\input.conf" `
+    "$d_mpvnet\input.conf"
+
+PathAndLink `
+    "$c_mpvnet\mpv.conf" `
+    "$d_mpvnet\mpv.conf"
 
 # powershell config
-$d_powershell = "$d_dir\WindowsPowerShell"
 $c_powershell = "$HOME\Documents\WindowsPowerShell"
+$d_powershell = "$d_dir\WindowsPowerShell"
 
-dploy link "$d_powershell" "$c_powershell"
+PathAndLink `
+    "$c_powershell\Microsoft.Powershell_profile.ps1" `
+    "$d_powershell\Microsoft.Powershell_profile.ps1"
+
+PathAndLink `
+    "$c_powershell\Microsoft.VSCode_profile.ps1" `
+    "$d_powershell\Microsoft.VSCode_profile.ps1"
+
 
 # nvim
-$d_nvim = "$d_dir\nvim"
 $c_nvim = "$env:LOCALAPPDATA\nvim"
+$d_nvim = "$d_dir\nvim"
 
-dploy link "$d_nvim" "$c_nvim"
+PathAndLink `
+    "$c_nvim\init.vim" `
+    "$d_nvim\init.vim"
+
+PathAndLink `
+    "$c_nvim\colors" `
+    "$d_nvim\colors"
+
+PathAndLink `
+    "$c_nvim\spell" `
+    "$d_nvim\spell"
 
 # emacs
-$d_emacs = "$d_dir\emacs"
 $c_emacs = "$env:APPDATA\.emacs.d"
+$d_emacs = "$d_dir\emacs"
 
-dploy link `
-    "$d_emacs\emojis" `
-    "$c_emacs\emojis"
-dploy link `
-    "$d_emacs\lisp" `
-    "$c_emacs\lisp"
-dploy link `
-    "$d_emacs\snippets" `
-    "$c_emacs\snippets"
-dploy link `
-    "$d_emacs\abbrev_defs" `
-    "$c_emacs\abbrev_defs"
-dploy link `
-    "$d_emacs\init.el" `
-    "$c_emacs\init.el"
+PathAndLink `
+    "$c_emacs\emojis" `
+    "$d_emacs\emojis"
+PathAndLink `
+    "$c_emacs\lisp" `
+    "$d_emacs\lisp"
+PathAndLink `
+    "$c_emacs\snippets" `
+    "$d_emacs\snippets"
+PathAndLink `
+    "$c_emacs\abbrev_defs" `
+    "$d_emacs\abbrev_defs"
+PathAndLink `
+    "$c_emacs\init.el" `
+    "$d_emacs\init.el"
 
 # gpodder
-$d_gpodder = "$d_dir\gpodder"
 $c_gpodder = "${ENV:ProgramFiles(x86)}\gPodder"
+$d_gpodder = "$d_dir\gpodder"
 
-dploy link `
-    "$d_gpodder\settings.ini" `
-    "$c_gpodder\etc\gtk-3.0\settings.ini"
+PathAndLink `
+    "$c_gpodder\etc\gtk-3.0\settings.ini" `
+    "$d_gpodder\settings.ini"
 
-dploy link `
-    "$d_gpodder\Settings.json" `
-    "$HOME\Documents\gPodder\Settings.json"
+PathAndLink `
+    "$HOME\Documents\gPodder\Settings.json" `
+    "$d_gpodder\Settings.json"
 
 # xournalpp
-$d_xournalpp = "$d_dir\xournalpp"
 $c_xournalpp = "$ENV:ProgramFiles\Xournal++"
+$d_xournalpp = "$d_dir\xournalpp"
 
-dploy link `
-    "$d_xournalpp\settings.ini" `
-    "$c_xournalpp\etc\gtk-3.0\settings.ini"
+PathAndLink `
+    "$c_xournalpp\etc\gtk-3.0\settings.ini" `
+    "$d_xournalpp\settings.ini"
 
 # retroarch
-$d_retroarch = "$d_dir\retroarch"
 $c_retroarch = "$env:HOMEDRIVE\RetroArch-Win64"
+$d_retroarch = "$d_dir\retroarch"
 
-dploy link `
-    "$d_retroarch\retroarch.cfg" `
-    "$c_retroarch\retroarch.cfg"
-dploy link `
-    "$d_retroarch\config" `
-    "$c_retroarch\config"
-dploy link `
-    "$d_retroarch\saves" `
-    "$c_retroarch\saves"
+PathAndLink `
+    "$c_retroarch\retroarch.cfg" `
+    "$d_retroarch\retroarch.cfg"
+PathAndLink `
+    "$c_retroarch\config" `
+    "$d_retroarch\config"
+PathAndLink `
+    "$c_retroarch\saves" `
+    "$d_retroarch\saves"
 
 # autohotkey
-$d_ahk = "$d_dir\ahk"
 $c_ahk = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
+$d_ahk = "$d_dir\ahk"
 
-dploy link `
-    "$d_ahk\binds.ahk" `
-    "$c_ahk\binds.ahk"
+PathAndLink `
+    "$c_ahk\binds.ahk" `
+    "$d_ahk\binds.ahk"
 
 # windows terminal
-$d_wt = "$d_dir\wt"
 $c_wt = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe"
+$d_wt = "$d_dir\wt"
 
-dploy link `
-    "$d_wt" `
-    "$c_wt\LocalState"
+PathAndLink `
+    "$c_wt\LocalState" `
+    "$d_wt"

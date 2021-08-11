@@ -131,7 +131,6 @@
 
     "editor.renderControlCharacters": false,
 
-
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "tab",
 
@@ -183,6 +182,7 @@
         "DLNA",
         "Decentraleyes",
         "EXIF",
+        "Helpdesk",
         "FEMA",
         "Avaya",
         "Gitlab",
@@ -272,6 +272,7 @@
         "fakeroot",
         "freetube",
         "gifs",
+        "huntgroup",
         "gitea",
         "graalvm",
         "graphene",
@@ -319,6 +320,7 @@
         "sysinternal",
         "testdisk",
         "travisci",
+        "teamviewer",
         "ublock",
         "telehealth",
         "usermod",
