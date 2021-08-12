@@ -34,7 +34,7 @@ function PathAndLink {
 }
 
 # folder containing real dotfiles
-$d_dir = "$HOME\dotfiles"
+$d_dir = "$PSScriptRoot"
 
 # vscodium
 $c_vscodium = "$env:APPDATA\VSCodium"
