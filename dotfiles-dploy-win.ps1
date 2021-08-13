@@ -134,20 +134,6 @@ PathAndLink `
     "$c_xournalpp\etc\gtk-3.0\settings.ini" `
     "$d_xournalpp\settings.ini"
 
-# retroarch
-$c_retroarch = "$env:HOMEDRIVE\RetroArch-Win64"
-$d_retroarch = "$d_dir\retroarch"
-
-PathAndLink `
-    "$c_retroarch\retroarch.cfg" `
-    "$d_retroarch\retroarch.cfg"
-PathAndLink `
-    "$c_retroarch\config" `
-    "$d_retroarch\config"
-PathAndLink `
-    "$c_retroarch\saves" `
-    "$d_retroarch\saves"
-
 # autohotkey
 $c_ahk = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
 $d_ahk = "$d_dir\ahk"
