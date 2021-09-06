@@ -45,6 +45,24 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "commandline": "%windir%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy ByPass -NoExit -Command \"& 'C:\\ProgramData\\Miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\ProgramData\\Miniconda3'\"",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceed452369}",
+                "hidden": false,
+                "icon": "C:\\ProgramData\\Miniconda3\\Menu\\Iconleak-Atrous-PSConsole.ico",
+                "name": "Miniconda - Powershell",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "colorScheme": "One Half Dark",
+                "commandline": "%windir%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy ByPass -NoExit -Command \"& 'C:\\ProgramData\\Miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\ProgramData\\Miniconda3'; xonsh \"",
+                "guid": "{9bc6efdc-4bc2-49ab-a424-424c79c779c8}",
+                "hidden": false,
+                "icon": "C:\\ProgramData\\Miniconda3\\Menu\\Iconleak-Atrous-PSConsole.ico",
+                "name": "Miniconda - Zonsh",
+                "startingDirectory": "%USERPROFILE%",
+                "useAcrylic": false
             }
         ]
     },

@@ -52,6 +52,9 @@ PathAndLink `
 PathAndLink `
     "$c_vscodium\User\tasks.json" `
     "$d_vscodium\User\tasks.json"
+PathAndLink `
+    "$c_vscodium\User\PSScriptAnalyzerSettings.psd1" `
+    "$d_vscodium\User\PSScriptAnalyzerSettings.psd1"
 
 # mpvnet
 $c_mpvnet = "$env:APPDATA\mpv.net"

@@ -8,10 +8,11 @@
     },
     "retries": 3,
     "update": {
-      "enabled": false,
+      "enabled": true,
       "frequency": 20
     }
   },
+  "check_connection": true,
   "device_sync": {
     "after_sync": {
       "delete_episodes": false,
@@ -64,12 +65,12 @@
   },
   "player": {
     "audio": "default",
-    "video": "default"
+    "video": "\"C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe\" --started-from-file \"%f\""
   },
   "software_update": {
     "check_on_startup": true,
     "interval": 5,
-    "last_check": 0
+    "last_check": 1628970123
   },
   "ui": {
     "cli": {
@@ -96,6 +97,13 @@
       },
       "search_always_visible": false,
       "state": {
+        "channel_editor": {
+          "height": -1,
+          "maximized": false,
+          "width": -1,
+          "x": -1,
+          "y": -1
+        },
         "config_editor": {
           "height": -1,
           "maximized": false,
@@ -128,10 +136,10 @@
           "episode_column_order": [],
           "episode_column_sort_id": 12,
           "episode_column_sort_order": false,
-          "episode_list_size": 200,
+          "episode_list_size": 633,
           "height": 500,
           "maximized": false,
-          "paned_position": 200,
+          "paned_position": 223,
           "width": 700,
           "x": -1,
           "y": -1
