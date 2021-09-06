@@ -80,7 +80,6 @@ PathAndLink `
     "$c_powershell\Microsoft.VSCode_profile.ps1" `
     "$d_powershell\Microsoft.VSCode_profile.ps1"
 
-
 # nvim
 $c_nvim = "$env:LOCALAPPDATA\nvim"
 $d_nvim = "$d_dir\nvim"
@@ -124,10 +123,6 @@ $d_gpodder = "$d_dir\gpodder"
 PathAndLink `
     "$c_gpodder\etc\gtk-3.0\settings.ini" `
     "$d_gpodder\settings.ini"
-
-PathAndLink `
-    "$HOME\Documents\gPodder\Settings.json" `
-    "$d_gpodder\Settings.json"
 
 # xournalpp
 $c_xournalpp = "$ENV:ProgramFiles\Xournal++"
