@@ -133,5 +133,25 @@
         "key": "shift+tab",
         "command": "selectPrevSuggestion",
         "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+=",
+        "command": "extension.customWindowZoomIn"
+    },
+    {
+        "key": "ctrl+9",
+        "command": "-extension.customWindowZoomIn"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "extension.customWindowZoomOut"
+    },
+    {
+        "key": "ctrl+8",
+        "command": "-extension.customWindowZoomOut"
     }
 ]

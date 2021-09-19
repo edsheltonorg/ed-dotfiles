@@ -8,13 +8,11 @@
     "security.workspace.trust.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
 
+    // file behavior
     "files.autoSave": "onFocusChange",
     "files.trimTrailingWhitespace": true,
-
-    // terminal behavior
-    "terminal.integrated.cwd": "",
-
-    "powershell.integratedConsole.suppressStartupBanner": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
 
     // problems behavior
     "errorLens.excludePatterns": [
@@ -30,21 +28,55 @@
         "**/.factorypath": true
     },
 
+    // terminal behavior
+    "terminal.integrated.cwd": "",
+    "powershell.integratedConsole.suppressStartupBanner": true,
+
+    // font behavior
+    "editor.fontFamily": "JetBrains Mono, DejaVu Sans Mono",
+    "editor.fontLigatures": false,
+    "editor.fontSize": 16,
+    // "editor.fontWeight": 800,
+    "terminal.integrated.fontFamily": "JetBrains Mono, DejaVu Sans Mono, monospace",
+    // "terminal.integrated.fontWeightBold": "bold",
+    "terminal.integrated.fontSize": 14,
+
     // editor rules
-    "editor.fontSize": 12,
     "editor.suggestSelection": "first",
     "editor.accessibilitySupport": "off",
     "editor.mouseWheelZoom": true,
     "editor.tabCompletion": "off",
     "editor.renderControlCharacters": false,
     "editor.renderWhitespace": "boundary",
-    "editor.cursorSurroundingLines": 10,
-    "editor.minimap.maxColumn": 40,
+    "editor.cursorSurroundingLines": 11,
+    "editor.minimap.maxColumn": 80,
     "editor.rulers": [
         80,
         120
     ],
     "editor.wordWrap": "wordWrapColumn",
+    "editor.bracketPairColorization.enabled": true,
+    "window.openFoldersInNewWindow": "on",
+    "window.restoreWindows": "preserve",
+    "window.titleBarStyle": "native",
+
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.activityBar.visible": false,
+
+    // custom zoom interval plugin
+    "customWindowZoom.zoomLevelChangeValue": 0.5,
+
+    // theme
+    "workbench.colorCustomizations": {
+        "[Default Dark+]": {
+            "editorHint.border": "#ff426b4d",
+            "editorHint.foreground": "#f000",
+            "statusBar.background" : "#1A1A1A",
+            "statusBar.noFolderBackground" : "#212121",
+            "statusBar.debuggingBackground": "#263238",
+            "statusBar.foreground" : "#b2c6c7",
+        },
+    },
 
     // language settings
     "[plaintext]": {
@@ -89,10 +121,15 @@
         "editor.tabSize": 2
     },
 
+    // javascript
     "[javascript]": {
         "editor.wordWrapColumn": 80,
         "editor.tabSize": 2
     },
+
+    // php
+    "php.validate.run": "onType",
+
 
     // emmet
     "emmet.syntaxProfiles": {
@@ -112,9 +149,6 @@
     "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
     "powershell.codeFormatting.useCorrectCasing": true,
 
-    // php
-    "php.validate.run": "onType",
-
     // latex
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "tab",
@@ -122,38 +156,6 @@
     // java
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
-    // theming and appearance
-    "window.openFoldersInNewWindow": "on",
-    "window.restoreWindows": "preserve",
-    "window.titleBarStyle": "native",
-
-    "workbench.editor.untitled.hint": "hidden",
-    "workbench.activityBar.visible": false,
-
-    "workbench.colorCustomizations": {
-        "[Default Dark+]": {
-            "editorHint.border": "#ff426b4d",
-            "editorHint.foreground": "#f000",
-            "statusBar.background" : "#1A1A1A",
-            "statusBar.noFolderBackground" : "#212121",
-            "statusBar.debuggingBackground": "#263238",
-            "statusBar.foreground" : "#b2c6c7"
-        },
-    },
-
-    "bracket-pair-colorizer-2.colors": [
-        "LightSkyBlue",
-        "Gold",
-        "Lime",
-        "Orchid"
-    ],
-    "bracket-pair-colorizer-2.showVerticalScopeLine": false,
-    "bracket-pair-colorizer-2.showHorizontalScopeLine": false,
-
-    "indentRainbow.excludedLanguages": [
-        "plaintext",
-        "org"
-    ],
 
     // -- Windows --
     // Terminal
@@ -464,4 +466,5 @@
         "winscp",
         "yandere"
     ],
+    "window.zoomLevel": 0,
 }
