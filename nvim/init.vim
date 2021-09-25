@@ -126,9 +126,9 @@ au BufEnter *.rmd setlocal foldexpr=MarkdownLevel()
 au BufEnter *.rmd setlocal foldmethod=expr
 
 " vim plug
-call plug#begin()
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-call plug#end()
+" call plug#begin()
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" call plug#end()
 
 " disable line wrap
 set formatoptions-=t

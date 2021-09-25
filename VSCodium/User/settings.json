@@ -1,5 +1,6 @@
 {
     // -- cross-platform --
+
     // telemetry
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
@@ -28,9 +29,13 @@
         "**/.factorypath": true
     },
 
+    // path intellisense plugin
+    "path-intellisense.showHiddenFiles": true,
+
     // terminal behavior
     "terminal.integrated.cwd": "",
     "powershell.integratedConsole.suppressStartupBanner": true,
+    "terminal.integrated.scrollback": 1000,
 
     // font behavior
     "editor.fontFamily": "JetBrains Mono, DejaVu Sans Mono",
@@ -40,6 +45,9 @@
     "terminal.integrated.fontFamily": "JetBrains Mono, DejaVu Sans Mono, monospace",
     // "terminal.integrated.fontWeightBold": "bold",
     "terminal.integrated.fontSize": 14,
+
+    // output behavior
+    "output.smartScroll.enabled": true,
 
     // editor rules
     "editor.suggestSelection": "first",
@@ -78,13 +86,24 @@
         },
     },
 
-    // language settings
+    // -- cross platform language settings --
+
+    // code runner extension
+    "code-runner.enableAppInsights": false,
+    "code-runner.runInTerminal": true,
+    "code-runner.preserveFocus": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.ignoreSelection": false,
+    "code-runner.temporaryFileName": "doNotGit",
+
+    // plaintext
     "[plaintext]": {
         "editor.wordWrapColumn": 80,
         "editor.wordBasedSuggestions": false,
     },
 
-    // markdwon
+    // markdown
     "[markdown]": {
         "editor.wordWrapColumn": 80,
         "editor.wordBasedSuggestions": false,
@@ -145,22 +164,24 @@
         "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
     },
 
+    "powershell.buttons.showRunButtons": false,
     "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
     "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
     "powershell.codeFormatting.useCorrectCasing": true,
+
+    // java
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
     // latex
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "tab",
 
-    // java
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-
-
     // -- Windows --
+
     // Terminal
     "terminal.integrated.defaultProfile.windows": "PowerShell",
-    "powershell.scriptAnalysis.settingsPath": "C:\\Users\\stacy\\dotfiles\\VSCodium\\User\\PSScriptAnalyzerSettings.psd1",
+    "powershell.debugging.createTemporaryIntegratedConsole": true,
+    "powershell.scriptAnalysis.settingsPath": "C:\\Users\\ed\\dotfiles\\VSCodium\\User\\PSScriptAnalyzerSettings.psd1",
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
             "source": "PowerShell",
@@ -180,6 +201,16 @@
         }
     },
 
+    // code runner for windows + powershell
+    "code-runner.executorMap": {
+        "c": "clear; gcc $fullFileName -o \"$fileNameWithoutExt\" && & .\\$(\"$fileNameWithoutExt\" + \".exe\") && if ((test-path ($file = $dir + \"doNotGit.exe\")) -and (test-path ($file2 = $dir + \"doNotGit.c\"))) {rm $file, $file2}",
+        "cpp": "clear; g++ $fullFileName -o \"$fileNameWithoutExt\" && & .\\$(\"$fileNameWithoutExt\" + \".exe\") && if ((test-path ($file = $dir + \"doNotGit.exe\")) -and (test-path ($file2 = $dir + \"doNotGit.cpp\"))) {rm $file, $file2}",
+        "csharp": "clear; dotnet run",
+        "powershell": "clear; powershell -ExecutionPolicy ByPass -File $fullFileName && if (test-path ($file = $dir + \"doNotGit.ps1\")) {rm $file}",
+        // "powershell": "clear; pwsh -ExecutionPolicy ByPass -File $fullFileName && if (test-path ($file = $dir + \"doNotGit.ps1\")) {rm $file}",
+        "python": "clear; python $fullFileName && if (test-path ($file = $dir + \"doNotGit.py\")) {rm $file}",
+    },
+
     // java
     "java.configuration.runtimes": [
         {
@@ -193,9 +224,11 @@
     "php.validate.executablePath": "C:\\bin-programs\\php\\php8.0.8\\php.exe",
 
     // -- cross-platform extras --
+
     // vscodevim
     "vim.useSystemClipboard": true,
     "vim.foldfix": true,
+    "vim.camelCaseMotion.enable": true,
     "vim.whichwrap": "h,l,<,>,[,]",
     "vim.handleKeys": {
         "<C-c>": false,
@@ -221,30 +254,6 @@
         {
             "before": ["<Space>"],
             "commands": ["editor.toggleFold"],
-        },
-        {
-            "before": ["g", "u"],
-            "commands": ["workbench.action.previousEditor"],
-        },
-        {
-            "before": ["g", "i"],
-            "commands": ["workbench.action.nextEditor"],
-        },
-        {
-            "before": ["g", "h"],
-            "commands": ["workbench.action.navigateLeft"],
-        },
-        {
-            "before": ["g", "l"],
-            "commands": ["workbench.action.navigateRight"],
-        },
-        {
-            "before": ["g", "j"],
-            "commands": ["workbench.action.navigateDown"],
-        },
-        {
-            "before": ["g", "k"],
-            "commands": ["workbench.action.navigateUp"],
         },
     ],
     "vim.insertModeKeyBindings": [
@@ -466,5 +475,5 @@
         "winscp",
         "yandere"
     ],
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1.5,
 }
