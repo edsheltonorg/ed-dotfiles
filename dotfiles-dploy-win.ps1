@@ -19,8 +19,8 @@ function PathAndLink {
         dploy link $dpath $cpath
     }
     elseif (($symtest.LinkType -eq "SymbolicLink") -eq $false) {
-        $input = Read-Host "'$cpath' is real and exists! Delete? (y/n)"
-        switch ($input) {
+        $uInput = Read-Host "'$cpath' is real and exists! Delete? (y/n)"
+        switch ($uInput) {
             y {
                 rm -Recurse -Force $cpath
                 dploy link $dpath $cpath
@@ -145,5 +145,13 @@ $c_wt = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe"
 $d_wt = "$d_dir\wt"
 
 PathAndLink `
-    "$c_wt\LocalState" `
-    "$d_wt"
+    "$c_wt\LocalState\settings.json" `
+    "$d_wt\settings.json"
+
+# IntelliJ Idea
+$c_intellij = "$HOME"
+$d_intellij = "$d_dir\intellij"
+
+PathAndLink `
+    "$c_intellij\.ideavimrc" `
+    "$d_intellij\.ideavimrc"

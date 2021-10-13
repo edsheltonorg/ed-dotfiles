@@ -92,8 +92,8 @@ set tabstop=4
 set shiftwidth=4
 
 "" autosave folds and autoloads them on open
-au WinLeave * mkview
-au WinEnter * silent loadview
+" au WinLeave * mkview
+" au WinEnter * silent loadview
 
 " remap spacebar to fold open/close (za) if able to, if not space
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
