@@ -5,7 +5,8 @@ CapsLock::Ctrl
 Ralt::return
 
 #w::Run, "C:\Program Files\Mozilla Firefox\firefox.exe"
-#e::Run explorer.exe "C:\Users\ed\"
+#e::Run explorer.exe "D:\"
+#+e::Run explorer.exe "C:\Users\ed\"
 
 >!i::Send {Up}
 >!j::Send {Left}
