@@ -1,7 +1,7 @@
 # run as admin -or- user must be granted symlink permissions & re-login.
 
-# DO NOT include SSH, GNUPG, OPENVPN, or other dirs that may contain secrets.
-# ALWAYS check for personal information in config files before pushing to a SVN.
+# dotfile directory, set to the script's folder.
+$d_dir = "$PSScriptRoot"
 
 # Check if path is symlinked, if not then delete / create dir to desired path.
 function PathAndLink {
@@ -33,8 +33,7 @@ function PathAndLink {
     }
 }
 
-# folder containing real dotfiles
-$d_dir = "$PSScriptRoot"
+# -- Config -- #
 
 # vscodium
 $c_vscodium = "$env:APPDATA\VSCodium"
@@ -96,34 +95,6 @@ PathAndLink `
     "$c_nvim\spell" `
     "$d_nvim\spell"
 
-# emacs
-$c_emacs = "$env:APPDATA\.emacs.d"
-$d_emacs = "$d_dir\emacs"
-
-PathAndLink `
-    "$c_emacs\emojis" `
-    "$d_emacs\emojis"
-PathAndLink `
-    "$c_emacs\lisp" `
-    "$d_emacs\lisp"
-PathAndLink `
-    "$c_emacs\snippets" `
-    "$d_emacs\snippets"
-PathAndLink `
-    "$c_emacs\abbrev_defs" `
-    "$d_emacs\abbrev_defs"
-PathAndLink `
-    "$c_emacs\init.el" `
-    "$d_emacs\init.el"
-
-# gpodder
-$c_gpodder = "${ENV:ProgramFiles(x86)}\gPodder"
-$d_gpodder = "$d_dir\gpodder"
-
-PathAndLink `
-    "$c_gpodder\etc\gtk-3.0\settings.ini" `
-    "$d_gpodder\settings.ini"
-
 # xournalpp
 $c_xournalpp = "$ENV:ProgramFiles\Xournal++"
 $d_xournalpp = "$d_dir\xournalpp"
@@ -147,6 +118,10 @@ $d_wt = "$d_dir\wt"
 PathAndLink `
     "$c_wt\LocalState\settings.json" `
     "$d_wt\settings.json"
+
+PathAndLink `
+    "$c_wt\LocalState\state.json" `
+    "$d_wt\state.json"
 
 # IntelliJ Idea
 $c_intellij = "$HOME"

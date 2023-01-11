@@ -2,8 +2,7 @@
     // -- cross-platform --
 
     // telemetry
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
+    "telemetry.telemetryLevel": "off",
 
     // security
     "security.workspace.trust.enabled": false,
@@ -21,7 +20,9 @@
     ],
 
     // file explorer
+    "workbench.editor.enablePreview": false,
     "explorer.confirmDelete": false,
+    "explorer.compactFolders": false,
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -50,11 +51,13 @@
     "output.smartScroll.enabled": true,
 
     // editor rules
+    "editor.inlayHints.enabled": "on",
+    "editor.inlayHints.padding": true,
+    "editor.parameterHints.cycle": true,
     "editor.suggestSelection": "first",
     "editor.accessibilitySupport": "off",
     "editor.mouseWheelZoom": true,
     "editor.tabCompletion": "off",
-    "editor.renderControlCharacters": false,
     "editor.renderWhitespace": "boundary",
     "editor.cursorSurroundingLines": 11,
     "editor.minimap.maxColumn": 80,
@@ -63,14 +66,14 @@
         120
     ],
     "editor.wordWrap": "wordWrapColumn",
-    "editor.bracketPairColorization.enabled": true,
     "window.openFoldersInNewWindow": "on",
     "window.restoreWindows": "preserve",
-    "window.titleBarStyle": "native",
+    "window.commandCenter": true,
     "workbench.editor.untitled.hint": "hidden",
+    "workbench.editor.tabSizing": "shrink",
 
-    // hide activity bar
-    "workbench.activityBar.visible": false,
+    // diff
+    "diffEditor.renderSideBySide": false,
 
     // explorer tree
     "workbench.tree.indent": 12,
@@ -81,7 +84,7 @@
     // theme
     "workbench.colorCustomizations": {
         "[Default Dark+]": {
-            "editorHint.border": "#ff426b4d",
+            "editorHint.border": "#ff426bbf",
             "editorHint.foreground": "#f000",
             "statusBar.background" : "#1A1A1A",
             "statusBar.noFolderBackground" : "#212121",
@@ -102,20 +105,68 @@
     "code-runner.ignoreSelection": false,
     "code-runner.temporaryFileName": "doNotGit",
 
+    // gitlens
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
+    "gitlens.defaultDateFormat": null,
+    "gitlens.hovers.annotations.enabled": false,
+    "gitlens.hovers.enabled": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": true
+    },
+
     // plaintext
     "[plaintext]": {
         "editor.wordWrapColumn": 80,
         "editor.wordBasedSuggestions": false,
+        "editor.rulers": [
+            72
+        ],
     },
 
     // markdown
     "[markdown]": {
         "editor.wordWrapColumn": 80,
         "editor.wordBasedSuggestions": false,
+        "editor.rulers": [
+            72
+        ],
     },
 
     "markdown.preview.scrollPreviewWithEditor": true,
     "markdown.preview.scrollEditorWithPreview": true,
+
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "heading.1.markdown entity.name.section.markdown, heading.1.markdown punctuation.definition.heading.markdown",
+                "settings": {
+                    "foreground": "#ffecac",
+                    "fontStyle": "bold",
+                }
+            },
+            {
+                "scope": "heading.2.markdown entity.name.section.markdown, heading.2.markdown punctuation.definition.heading.markdown",
+                "settings": {
+                    "foreground": "#9fdaab",
+                }
+            },
+            {
+                "scope": "heading.3.markdown entity.name.section.markdown, heading.3.markdown punctuation.definition.heading.markdown",
+                "settings": {
+                    "foreground": "#839ad4",
+                }
+            },
+            {
+                "scope": "heading.4.markdown entity.name.section.markdown, heading.4.markdown punctuation.definition.heading.markdown",
+                "settings": {
+                    "foreground": "#faacd7",
+                }
+            },
+        ]
+    },
 
     "pasteImage.defaultName":"[image-]YYYYMMDDHHmmss",
     "pasteImage.insertPattern": "<img src=\"${currentFileName}-media/${imageFileName}\" alt=\"drawing\" width=\"50\" />",
@@ -123,10 +174,15 @@
     "pasteImage.basePath": "${currentFileDir}",
     "pasteImage.forceUnixStyleSeparator": true,
 
+    "markdown.marp.enableHtml": true,
+
     // org
     "[org]": {
         "editor.wordWrapColumn": 80,
         "editor.wordBasedSuggestions": false,
+        "editor.rulers": [
+            72
+        ],
     },
 
     // html
@@ -135,6 +191,7 @@
         "editor.tabSize": 2
     },
 
+    // live server
     "liveServer.settings.donotVerifyTags": true,
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.useWebExt": true,
@@ -151,10 +208,6 @@
         "editor.tabSize": 2
     },
 
-    // php
-    "php.validate.run": "onType",
-
-
     // emmet
     "emmet.syntaxProfiles": {
         "html": {
@@ -162,17 +215,39 @@
         }
     },
 
+    // php
+    "php.validate.run": "onType",
+
+    // python
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+
+    // jupyter notebook
+    "jupyter.interactiveWindowMode": "perFile",
+    "jupyter.askForKernelRestart": false,
+    "notebook.output.textLineLimit": 10000,
+
     // powershell
     "[powershell]": {
         "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
         "editor.semanticHighlighting.enabled": false,
         "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
     },
-
     "powershell.buttons.showRunButtons": false,
     "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
     "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
     "powershell.codeFormatting.useCorrectCasing": true,
+
+    // C#
+    "csharp.inlayHints.types.enabled": true,
+    "csharp.inlayHints.parameters.forLiteralParameters": true,
+    "csharp.inlayHints.parameters.forIndexerParameters": true,
+    "csharp.inlayHints.parameters.forObjectCreationParameters": true,
+    "csharp.inlayHints.parameters.forOtherParameters": true,
+    "csharp.inlayHints.types.forImplicitObjectCreation": true,
+    "csharp.inlayHints.types.forImplicitVariableTypes": true,
+    "csharp.inlayHints.types.forLambdaParameterTypes": true,
+    "csharp.inlayHints.parameters.enabled": true,
 
     // java
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -181,40 +256,15 @@
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "tab",
 
+    // platform.io
+    "platformio-ide.activateOnlyOnPlatformIOProject": true,
+
     // -- Windows --
 
     // Terminal
     "terminal.integrated.defaultProfile.windows": "PowerShell",
     "powershell.debugging.createTemporaryIntegratedConsole": true,
     "powershell.scriptAnalysis.settingsPath": "C:\\Users\\ed\\dotfiles\\VSCodium\\User\\PSScriptAnalyzerSettings.psd1",
-    "terminal.integrated.profiles.windows": {
-        "PowerShell": {
-            "source": "PowerShell",
-            "icon": "terminal-powershell",
-            "args": ["-nologo"]
-        },
-        "Command Prompt": {
-            "path": [
-                "${env:windir}\\Sysnative\\cmd.exe",
-                "${env:windir}\\System32\\cmd.exe"
-            ],
-            "args": [],
-            "icon": "terminal-cmd"
-        },
-        "Git Bash": {
-            "source": "Git Bash"
-        }
-    },
-
-    // code runner for windows + powershell
-    "code-runner.executorMap": {
-        "c": "clear; gcc $fullFileName -o \"$fileNameWithoutExt\" && & .\\$(\"$fileNameWithoutExt\" + \".exe\") && if ((test-path ($file = $dir + \"doNotGit.exe\")) -and (test-path ($file2 = $dir + \"doNotGit.c\"))) {rm $file, $file2}",
-        "cpp": "clear; g++ $fullFileName -o \"$fileNameWithoutExt\" && & .\\$(\"$fileNameWithoutExt\" + \".exe\") && if ((test-path ($file = $dir + \"doNotGit.exe\")) -and (test-path ($file2 = $dir + \"doNotGit.cpp\"))) {rm $file, $file2}",
-        "csharp": "clear; dotnet run",
-        "powershell": "clear; powershell -ExecutionPolicy ByPass -File $fullFileName && if (test-path ($file = $dir + \"doNotGit.ps1\")) {rm $file}",
-        // "powershell": "clear; pwsh -ExecutionPolicy ByPass -File $fullFileName && if (test-path ($file = $dir + \"doNotGit.ps1\")) {rm $file}",
-        "python": "clear; python $fullFileName && if (test-path ($file = $dir + \"doNotGit.py\")) {rm $file}",
-    },
 
     // java
     "java.configuration.runtimes": [
@@ -227,7 +277,7 @@
     ],
 
     // php
-    "php.validate.executablePath": "C:\\bin-programs\\php\\php8.0.8\\php.exe",
+    // "php.validate.executablePath": "C:\\bin-programs\\php\\php8.0.8\\php.exe",
 
     // -- cross-platform extras --
 
@@ -320,171 +370,321 @@
         "*.dll",
     ],
     "cSpell.userWords": [
+        "acronis",
         "adhd",
         "alsa",
         "andotp",
+        "Anki",
+        "anonymization",
+        "Anonymizing",
+        "APIPA",
         "Appium",
         "Artix",
+        "Audacium",
         "Avaya",
         "azuread",
         "backdoors",
+        "backuppc",
+        "baremetal",
+        "bareos",
         "bitwarden",
+        "biztalk",
+        "blazor",
+        "bootloader",
         "Brainz",
         "BTFO",
+        "btrfs",
+        "Buku",
+        "Bukubrow",
         "bytecode",
         "CCNA",
         "centos",
+        "Chainable",
+        "Cheapos",
         "cicd",
         "circleci",
         "codium",
+        "commandlet",
         "commandline",
+        "conntrackd",
         "cybersec",
+        "Daisychain",
         "Dbeaver",
         "ddos",
         "Decentraleyes",
+        "deduplicated",
+        "deque",
         "desaturation",
+        "devtest",
         "devuan",
+        "dhcpd",
         "directx",
+        "Distro",
         "distros",
         "DLNA",
         "dockerfiles",
+        "Doku",
         "dotfile",
         "doxygen",
+        "dpapi",
         "dploy",
+        "Drac",
+        "dunders",
+        "duplicacy",
+        "ECMS",
         "EXIF",
         "exiftool",
         "fakeroot",
+        "Fargate",
         "FEMA",
+        "Feynmen",
+        "fips",
+        "FOSS",
         "freetube",
+        "Gamification",
+        "Gfci",
         "gifs",
         "gitea",
         "Gitlab",
         "graalvm",
+        "Grafana",
         "graphene",
         "Graphviz",
+        "greylisting",
+        "Hamcrest",
+        "hansei",
+        "Hardphone",
         "hashicorp",
         "HAXM",
+        "heapq",
         "Helpdesk",
         "hostable",
+        "Hotspot",
+        "hsts",
         "huntgroup",
+        "hyperv",
         "Inkscape",
         "Intellij",
         "Intune",
+        "IPAM",
         "ipkvm",
+        "ITIL",
         "jdbc",
         "Jellyfin",
         "jpackage",
+        "jtag",
+        "jumpbox",
+        "kaizen",
+        "Kanban",
         "karabiner",
+        "katello",
+        "KCNA",
         "Kdenlive",
         "Keepass",
         "keybind",
         "keychain",
+        "killall",
+        "Kimai",
         "Konica",
+        "kopia",
         "Krita",
         "Ksnip",
+        "kubernetes",
+        "kwargs",
         "laravel",
         "LARPing",
         "libapache",
+        "libc",
         "Libet",
         "libgd",
+        "librenms",
         "libssl",
+        "Linphone",
+        "liquibase",
         "livestreaming",
+        "livestreams",
         "losslessly",
+        "LUKS",
         "Lynnfield",
         "Macbook",
         "macos",
+        "Mailcow",
+        "marp",
+        "mbuffer",
+        "Mckeown",
         "MELPA",
         "memdbg",
         "Meraki",
+        "miata",
+        "microcontrollers",
+        "MITM",
         "Mixxx",
         "Monolta",
+        "Motioneye",
         "mspaint",
         "MSVC",
         "MSVCC",
         "Msys",
         "multiboot",
+        "multicloud",
+        "multiset",
+        "Multiversion",
+        "muxing",
+        "MVCC",
+        "mvvm",
+        "NACL",
+        "netboot",
+        "netbox",
         "nextcloud",
         "nikes",
+        "Nikto",
+        "Nitrokey",
         "NLVE",
+        "Nonactionable",
         "nosql",
         "NSSM",
         "NTFS",
         "Nullpomino",
         "nvim",
+        "ocsp",
         "Okular",
+        "onedrive",
+        "Onlykey",
+        "ONVIF",
         "opensource",
+        "Optiplex",
+        "ordereddict",
         "osascript",
         "overcommit",
+        "Owasp",
         "pacman",
         "pandoc",
+        "Papercut",
         "Pathing",
         "Pavucontrol",
         "PDFs",
         "pdftk",
+        "pfsense",
+        "pfsync",
+        "Pkill",
+        "platformio",
         "Plex",
+        "PMBAK",
+        "PMBOK",
         "Podder",
+        "Polycom",
         "pomodoro",
         "Pomotroid",
         "POSIX",
         "Postgresql",
+        "postwhite",
+        "poweradmin",
+        "powerdns",
         "Prereqs",
+        "Promtail",
+        "Pseudonymization",
         "pulseaudio",
         "Puyo",
         "pyside",
+        "Pytest",
         "Qalculate",
         "qbit",
         "qbittorrent",
         "qdirstat",
+        "rackmount",
         "rclone",
         "RDBMS",
+        "readline",
+        "recursor",
         "Redist",
+        "Reimage",
         "remotable",
+        "remoting",
         "replaygain",
         "Restic",
         "Retroarch",
         "RHCSA",
+        "roadmap",
+        "routable",
+        "RSAT",
         "rssguard",
+        "rtmp",
         "rtti",
+        "Runbook",
+        "Runbooks",
         "runtimes",
+        "sata",
+        "Savapage",
+        "Shaarli",
         "sharepoint",
         "Sharepoint",
+        "SIEM",
+        "slidedeck",
+        "snds",
         "SNMP",
+        "Softphone",
         "stdlib",
+        "Steelcase",
+        "subclassing",
+        "subvolumes",
+        "surebackup",
+        "Suricata",
         "sxhkd",
+        "symlinking",
         "syncplay",
         "syncthing",
         "sysinternal",
         "Syuu",
+        "taskwarrior",
         "teamviewer",
         "telehealth",
         "Tesseract",
         "testdisk",
         "Tetris",
         "Texlive",
+        "timewarrior",
+        "Tracerpt",
+        "traefik",
         "travisci",
         "ublock",
+        "Unifi",
         "Unmanaged",
+        "Unpatched",
+        "urbackup",
+        "USBC",
         "usermod",
         "usql",
+        "veeam",
         "Ventoy",
         "Veracrypt",
+        "VESA",
         "Vimium",
         "Virtualbox",
         "Visio",
         "VPNs",
         "vscodium",
+        "vuln",
+        "walkthrough",
+        "Wallabag",
         "Wayback",
+        "Wazuh",
+        "websockets",
+        "whitebox",
         "wincdemu",
         "windirstat",
         "winfsp",
         "winrm",
         "winscp",
         "Wireshark",
+        "wwyd",
         "XMPP",
         "Xournalpp",
+        "xtrabackup",
         "yandere",
         "Youtube",
+        "Zabbix",
+        "Zammad",
         "Zenmap"
     ],
-    "window.zoomLevel": -1.5,
+    "window.zoomLevel": -1,
 }

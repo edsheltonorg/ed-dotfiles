@@ -4,6 +4,23 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Compile Markdown (markdown-it)",
+            "type": "shell",
+            "command": "markdown-it",
+            "options": {
+                "cwd": "${workspaceFolder}",
+            },
+            "args": [
+                "'${relativeFile}'",
+                 "-o",
+                 "'html${pathSeparator}${fileBasenameNoExtension}.html'"
+                 ],
+             "group": {
+                "kind": "build",
+                // "isDefault": true
+             },
+        },
+        {
             "label": "Compile Markdown New",
             "type": "shell",
             "options": {

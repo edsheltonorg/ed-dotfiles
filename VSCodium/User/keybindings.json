@@ -12,6 +12,20 @@
         "args": "cmdR-All-alt"
     },
     {
+        "key": "ctrl+up",
+        "command": "workbench.action.compareEditor.previousChange",
+        "when": "textCompareEditorVisible && isInDiffEditor"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "workbench.action.compareEditor.nextChange",
+        "when": "textCompareEditorVisible  && isInDiffEditor"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
         "key": "ctrl+tab",
         "command": "workbench.action.nextEditor"
     },
@@ -153,5 +167,25 @@
     {
         "key": "ctrl+8",
         "command": "-extension.customWindowZoomOut"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-extension.vim_ctrl+e",
+        "when": "editorTextFocus && vim.active && vim.use<C-e> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "-workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
     }
 ]

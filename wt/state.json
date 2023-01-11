@@ -1,10 +1,18 @@
 {
+	"dismissedMessages" : 
+	[
+		"setAsDefault"
+	],
 	"generatedProfiles" : 
 	[
 		"{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
 		"{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+		"{2c4de342-38b7-51cf-b940-2309a097f518}",
 		"{0caa0dad-35be-5f56-a8ff-afceed452369}",
 		"{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-		"{9bc6efdc-4bc2-49ab-a424-424c79c779c8}"
+		"{339a7d45-ca04-592b-a743-3eec1a232620}",
+		"{9bc6efdc-4bc2-49ab-a424-424c79c779c8}",
+		"{ec683f28-688e-5c21-86cd-042116bfe056}",
+		"{9d244077-408c-52d8-b93a-88d3514970e5}"
 	]
 }
