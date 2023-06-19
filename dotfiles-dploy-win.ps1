@@ -35,37 +35,45 @@ function PathAndLink {
 
 # -- Config -- #
 
-# vscodium
-$c_vscodium = "$env:APPDATA\VSCodium"
-$d_vscodium = "$d_dir\VSCodium"
+# VSCode
+$c_code = "$env:APPDATA\Code"
+$d_code = "$d_dir\Code"
 
 PathAndLink `
-    "$c_vscodium\User\snippets\" `
-    "$d_vscodium\User\snippets\"
+    "$c_code\User\snippets\" `
+    "$d_code\User\snippets\"
 PathAndLink `
-    "$c_vscodium\User\keybindings.json" `
-    "$d_vscodium\User\keybindings.json"
+    "$c_code\User\keybindings.json" `
+    "$d_code\User\keybindings.json"
 PathAndLink `
-    "$c_vscodium\User\settings.json" `
-    "$d_vscodium\User\settings.json"
+    "$c_code\User\settings.json" `
+    "$d_code\User\settings.json"
 PathAndLink `
-    "$c_vscodium\User\tasks.json" `
-    "$d_vscodium\User\tasks.json"
+    "$c_code\User\tasks.json" `
+    "$d_code\User\tasks.json"
 PathAndLink `
-    "$c_vscodium\User\PSScriptAnalyzerSettings.psd1" `
-    "$d_vscodium\User\PSScriptAnalyzerSettings.psd1"
+    "$c_code\User\PSScriptAnalyzerSettings.psd1" `
+    "$d_code\User\PSScriptAnalyzerSettings.psd1"
 
-# mpvnet
-$c_mpvnet = "$env:APPDATA\mpv.net"
-$d_mpvnet = "$d_dir\mpv.net"
+## VSCodium
+#$c_vscodium = "$env:APPDATA\VSCodium"
+#$d_vscodium = "$d_dir\VSCodium"
 
-PathAndLink `
-    "$c_mpvnet\input.conf" `
-    "$d_mpvnet\input.conf"
-
-PathAndLink `
-    "$c_mpvnet\mpv.conf" `
-    "$d_mpvnet\mpv.conf"
+#PathAndLink `
+    #"$c_vscodium\User\snippets\" `
+    #"$d_vscodium\User\snippets\"
+#PathAndLink `
+    #"$c_vscodium\User\keybindings.json" `
+    #"$d_vscodium\User\keybindings.json"
+#PathAndLink `
+    #"$c_vscodium\User\settings.json" `
+    #"$d_vscodium\User\settings.json"
+#PathAndLink `
+    #"$c_vscodium\User\tasks.json" `
+    #"$d_vscodium\User\tasks.json"
+#PathAndLink `
+    #"$c_vscodium\User\PSScriptAnalyzerSettings.psd1" `
+    #"$d_vscodium\User\PSScriptAnalyzerSettings.psd1"
 
 # powershell config
 $c_powershell = "$HOME\Documents\WindowsPowerShell"
@@ -95,14 +103,6 @@ PathAndLink `
     "$c_nvim\spell" `
     "$d_nvim\spell"
 
-# xournalpp
-$c_xournalpp = "$ENV:ProgramFiles\Xournal++"
-$d_xournalpp = "$d_dir\xournalpp"
-
-PathAndLink `
-    "$c_xournalpp\etc\gtk-3.0\settings.ini" `
-    "$d_xournalpp\settings.ini"
-
 # autohotkey
 $c_ahk = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
 $d_ahk = "$d_dir\ahk"
@@ -110,18 +110,6 @@ $d_ahk = "$d_dir\ahk"
 PathAndLink `
     "$c_ahk\binds.ahk" `
     "$d_ahk\binds.ahk"
-
-# windows terminal
-$c_wt = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe"
-$d_wt = "$d_dir\wt"
-
-PathAndLink `
-    "$c_wt\LocalState\settings.json" `
-    "$d_wt\settings.json"
-
-PathAndLink `
-    "$c_wt\LocalState\state.json" `
-    "$d_wt\state.json"
 
 # IntelliJ Idea
 $c_intellij = "$HOME"

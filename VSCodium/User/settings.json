@@ -5,14 +5,14 @@
     "telemetry.telemetryLevel": "off",
 
     // security
-    "security.workspace.trust.enabled": false,
+    "security.workspace.trust.enabled"       : false,
     "security.workspace.trust.untrustedFiles": "open",
 
     // file behavior
-    "files.autoSave": "onFocusChange",
+    "files.autoSave"              : "onFocusChange",
     "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline"    : true,
+    "files.trimFinalNewlines"     : true,
 
     // problems behavior
     "errorLens.excludePatterns": [
@@ -21,12 +21,12 @@
 
     // file explorer
     "workbench.editor.enablePreview": false,
-    "explorer.confirmDelete": false,
-    "explorer.compactFolders": false,
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
+    "explorer.compactFolders"       : false,
+    "explorer.confirmDelete"        : false,
+    "files.exclude"                 : {
+        "**/.classpath"  : true,
+        "**/.project"    : true,
+        "**/.settings"   : true,
         "**/.factorypath": true
     },
 
@@ -34,105 +34,115 @@
     "path-intellisense.showHiddenFiles": true,
 
     // terminal behavior
-    "terminal.integrated.cwd": "",
+    "terminal.integrated.cwd"                           : "",
     "powershell.integratedConsole.suppressStartupBanner": true,
-    "terminal.integrated.scrollback": 1000,
+    "terminal.integrated.scrollback"                    : 1000,
 
-    // font behavior
-    "editor.fontFamily": "JetBrains Mono, DejaVu Sans Mono",
+    // editor font behavior
+    "window.zoomLevel"    : -1,
+    "editor.links"        : true,
     "editor.fontLigatures": false,
-    "editor.fontSize": 16,
-    // "editor.fontWeight": 800,
-    "terminal.integrated.fontFamily": "JetBrains Mono, DejaVu Sans Mono, monospace",
-    // "terminal.integrated.fontWeightBold": "bold",
-    "terminal.integrated.fontSize": 14,
+    "editor.fontWeight"   : 300,
+    "editor.fontFamily"   : "JetBrains Mono",   // Normal
+    "editor.fontSize"     : 14,                 // Normal
+    "editor.lineHeight"   : 1.4,                // Normal
+    // "editor.fontFamily"   : "JetBrains Mono",   // Small
+    // "editor.fontSize"     : 12,                 // Small
+    // "editor.lineHeight"   : 1.5,                // Small
+    // "editor.fontFamily"   : "Iosevka SS14",     // Normal Condensed Width
+    // "editor.fontSize"     : 14,                 // Normal Condensed Width
+    // "editor.lineHeight"   : 1.5,                // Normal Condensed Width
+    // "editor.fontFamily"   : "JetBrains Mono",   // Presentation
+    // "editor.fontSize"     : 16,                 // Presentation
+    // "editor.lineHeight"   : 1.6,                // Presentation
+    // "window.zoomLevel"    : 1,                  // Presentation
+
+    // terminal font behavior
+    "terminal.integrated.fontWeightBold": 500,
+    "terminal.integrated.fontWeight"    : 300,
+    "terminal.integrated.fontSize"      : 14,
+    "terminal.integrated.fontFamily"    : "JetBrains Mono",
 
     // output behavior
     "output.smartScroll.enabled": true,
 
     // editor rules
-    "editor.inlayHints.enabled": "on",
-    "editor.inlayHints.padding": true,
-    "editor.parameterHints.cycle": true,
-    "editor.suggestSelection": "first",
-    "editor.accessibilitySupport": "off",
-    "editor.mouseWheelZoom": true,
-    "editor.tabCompletion": "off",
-    "editor.renderWhitespace": "boundary",
+    "editor.suggestSelection"      : "first",
+    "editor.accessibilitySupport"  : "off",
+    "editor.inlayHints.enabled"    : "on",
+    "editor.inlayHints.padding"    : true,
+    "editor.parameterHints.cycle"  : true,
+    "editor.mouseWheelZoom"        : true,
+    "editor.tabCompletion"         : "off",
+    "editor.renderWhitespace"      : "boundary",
     "editor.cursorSurroundingLines": 11,
-    "editor.minimap.maxColumn": 80,
-    "editor.rulers": [
+    "editor.minimap.maxColumn"     : 80,
+    "editor.rulers"                : [
         80,
         120
     ],
-    "editor.wordWrap": "wordWrapColumn",
-    "window.openFoldersInNewWindow": "on",
-    "window.restoreWindows": "preserve",
-    "window.commandCenter": true,
+    "editor.wordWrap"               : "wordWrapColumn",
+    "window.openFoldersInNewWindow" : "on",
+    "window.restoreWindows"         : "preserve",
     "workbench.editor.untitled.hint": "hidden",
-    "workbench.editor.tabSizing": "shrink",
-
-    // diff
-    "diffEditor.renderSideBySide": false,
+    "workbench.editor.tabSizing"    : "fit",
+    // "editor.guides.bracketPairs"              : true,
+    // "editor.guides.highlightActiveIndentation": true,
 
     // explorer tree
     "workbench.tree.indent": 12,
 
-    // custom zoom interval plugin
-    "customWindowZoom.zoomLevelChangeValue": 0.5,
-
     // theme
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.colorCustomizations": {
         "[Default Dark+]": {
-            "editorHint.border": "#ff426bbf",
-            "editorHint.foreground": "#f000",
-            "statusBar.background" : "#1A1A1A",
+            "editorHint.border"            : "#ff426bbf",
+            "editorHint.foreground"        : "#f000",       // invisible border
+            "statusBar.background"         : "#1A1A1A",
             "statusBar.noFolderBackground" : "#212121",
             "statusBar.debuggingBackground": "#263238",
-            "statusBar.foreground" : "#b2c6c7",
-            "tree.indentGuidesStroke": "#3e4860"
+            "statusBar.foreground"         : "#b2c6c7",
+            "tree.indentGuidesStroke"      : "#3e4860"
         },
     },
+
+    // Remove empty lines extension
+    "remove-empty-lines.allowedNumberOfEmptyLines": 1,
 
     // -- cross platform language settings --
 
     // code runner extension
-    "code-runner.enableAppInsights": false,
-    "code-runner.runInTerminal": true,
-    "code-runner.preserveFocus": true,
-    "code-runner.saveFileBeforeRun": true,
+    "code-runner.enableAppInsights"  : false,
+    "code-runner.runInTerminal"      : true,
+    "code-runner.preserveFocus"      : true,
+    "code-runner.saveFileBeforeRun"  : true,
     "code-runner.clearPreviousOutput": true,
-    "code-runner.ignoreSelection": false,
-    "code-runner.temporaryFileName": "doNotGit",
-
-    // gitlens
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.currentLine.enabled": false,
-    "gitlens.codeLens.enabled": false,
-    "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
-    "gitlens.defaultDateFormat": null,
-    "gitlens.hovers.annotations.enabled": false,
-    "gitlens.hovers.enabled": false,
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": true
-    },
+    "code-runner.ignoreSelection"    : false,
+    "code-runner.temporaryFileName"  : "doNotGit",
 
     // plaintext
     "[plaintext]": {
-        "editor.wordWrapColumn": 80,
+        "editor.wordWrapColumn"      : 80,
         "editor.wordBasedSuggestions": false,
-        "editor.rulers": [
+        "editor.rulers"              : [
             72
         ],
     },
 
     // markdown
     "[markdown]": {
-        "editor.wordWrapColumn": 80,
+        "editor.wordWrapColumn"      : 80,
         "editor.wordBasedSuggestions": false,
-        "editor.rulers": [
-            72
+        "editor.rulers"              : [
+            66,
+            72,
+            80
         ],
+        "editor.quickSuggestions":{
+            "other"   : "off",   // turn on for emmet hints
+            "comments": "off",
+            "strings" : "off"
+        }
     },
 
     "markdown.preview.scrollPreviewWithEditor": true,
@@ -141,26 +151,26 @@
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
-                "scope": "heading.1.markdown entity.name.section.markdown, heading.1.markdown punctuation.definition.heading.markdown",
+                "scope"   : "heading.1.markdown entity.name.section.markdown, heading.1.markdown punctuation.definition.heading.markdown",
                 "settings": {
                     "foreground": "#ffecac",
-                    "fontStyle": "bold",
+                    "fontStyle" : "bold",
                 }
             },
             {
-                "scope": "heading.2.markdown entity.name.section.markdown, heading.2.markdown punctuation.definition.heading.markdown",
+                "scope"   : "heading.2.markdown entity.name.section.markdown, heading.2.markdown punctuation.definition.heading.markdown",
                 "settings": {
                     "foreground": "#9fdaab",
                 }
             },
             {
-                "scope": "heading.3.markdown entity.name.section.markdown, heading.3.markdown punctuation.definition.heading.markdown",
+                "scope"   : "heading.3.markdown entity.name.section.markdown, heading.3.markdown punctuation.definition.heading.markdown",
                 "settings": {
                     "foreground": "#839ad4",
                 }
             },
             {
-                "scope": "heading.4.markdown entity.name.section.markdown, heading.4.markdown punctuation.definition.heading.markdown",
+                "scope"   : "heading.4.markdown entity.name.section.markdown, heading.4.markdown punctuation.definition.heading.markdown",
                 "settings": {
                     "foreground": "#faacd7",
                 }
@@ -168,19 +178,19 @@
         ]
     },
 
-    "pasteImage.defaultName":"[image-]YYYYMMDDHHmmss",
-    "pasteImage.insertPattern": "<img src=\"${currentFileName}-media/${imageFileName}\" alt=\"drawing\" width=\"50\" />",
-    "pasteImage.path": "${currentFileDir}/${currentFileName}-media",
-    "pasteImage.basePath": "${currentFileDir}",
+    "pasteImage.defaultName"            : "[image-]YYYYMMDDHHmmss",
+    "pasteImage.insertPattern"          : "<img src=\"${currentFileName}-media/${imageFileName}\" alt=\"drawing\" width=\"50\" />",
+    "pasteImage.path"                   : "${currentFileDir}/${currentFileName}-media",
+    "pasteImage.basePath"               : "${currentFileDir}",
     "pasteImage.forceUnixStyleSeparator": true,
 
     "markdown.marp.enableHtml": true,
 
     // org
     "[org]": {
-        "editor.wordWrapColumn": 80,
+        "editor.wordWrapColumn"      : 80,
         "editor.wordBasedSuggestions": false,
-        "editor.rulers": [
+        "editor.rulers"              : [
             72
         ],
     },
@@ -188,55 +198,71 @@
     // html
     "[html]": {
         "editor.wordWrapColumn": 80,
-        "editor.tabSize": 2
+        "editor.tabSize"       : 2
     },
 
-    // live server
-    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotVerifyTags" : true,
     "liveServer.settings.donotShowInfoMsg": true,
-    "liveServer.settings.useWebExt": true,
+    "liveServer.settings.useWebExt"       : true,
 
     // css
     "[css]": {
         "editor.wordWrapColumn": 80,
-        "editor.tabSize": 2
+        "editor.tabSize"       : 2
     },
 
     // javascript
     "[javascript]": {
         "editor.wordWrapColumn": 80,
-        "editor.tabSize": 2
-    },
-
-    // emmet
-    "emmet.syntaxProfiles": {
-        "html": {
-            "self_closing_tag" : true
-        }
+        "editor.tabSize"       : 2
     },
 
     // php
     "php.validate.run": "onType",
 
-    // python
-    "python.analysis.inlayHints.functionReturnTypes": true,
-    "python.analysis.inlayHints.variableTypes": true,
+    // Java
+    "[java]": {
+        "editor.wordWrapColumn"      : 120,
+        "editor.wordBasedSuggestions": false,
+        "editor.rulers"              : [
+            80,
+            120
+        ],
+    },
 
-    // jupyter notebook
-    "jupyter.interactiveWindowMode": "perFile",
-    "jupyter.askForKernelRestart": false,
-    "notebook.output.textLineLimit": 10000,
+    // emmet
+    "emmet.syntaxProfiles": {
+        "html": {
+            "self_closing_tag": true
+        }
+    },
+    "emmet.excludeLanguages"        : [],
+    "emmet.includeLanguages"        : {"markdown": "html"},
+    "emmet.triggerExpansionOnTab"   : true,
+    // "emmet.showExpandedAbbreviation": "never",
 
     // powershell
     "[powershell]": {
-        "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+        "debug.saveBeforeStart"              : "nonUntitledEditorsInActiveGroup",
         "editor.semanticHighlighting.enabled": false,
-        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+        "editor.wordSeparators"              : "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
     },
-    "powershell.buttons.showRunButtons": false,
+
+    "powershell.buttons.showRunButtons"                 : false,
     "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
     "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
-    "powershell.codeFormatting.useCorrectCasing": true,
+    "powershell.codeFormatting.useCorrectCasing"        : true,
+
+    // java
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+    // latex
+    "latex-workshop.message.update.show" : false,
+    "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+    "latex-workshop.view.pdf.viewer"     : "tab",
+
+    // platform.io
+    "platformio-ide.activateOnlyOnPlatformIOProject": true,
 
     // C#
     "csharp.inlayHints.types.enabled": true,
@@ -249,22 +275,40 @@
     "csharp.inlayHints.types.forLambdaParameterTypes": true,
     "csharp.inlayHints.parameters.enabled": true,
 
-    // java
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    // Python
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
 
-    // latex
-    "latex-workshop.message.update.show": false,
-    "latex-workshop.view.pdf.viewer": "tab",
-
-    // platform.io
-    "platformio-ide.activateOnlyOnPlatformIOProject": true,
+    // Python Notebook
+    "jupyter.askForKernelRestart": false,
+    "notebook.output.textLineLimit": 10000,
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "workbench.startupEditor": "none",
 
     // -- Windows --
 
     // Terminal
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.windows"           : "PowerShell",
     "powershell.debugging.createTemporaryIntegratedConsole": true,
-    "powershell.scriptAnalysis.settingsPath": "C:\\Users\\ed\\dotfiles\\VSCodium\\User\\PSScriptAnalyzerSettings.psd1",
+    "powershell.scriptAnalysis.settingsPath"               : "C:\\Users\\ed\\dotfiles\\VSCodium\\User\\PSScriptAnalyzerSettings.psd1",
+    "terminal.integrated.profiles.windows"                 : {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon"  : "terminal-powershell",
+            "args"  : ["-nologo"]
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        }
+    },
 
     // java
     "java.configuration.runtimes": [
@@ -277,49 +321,62 @@
     ],
 
     // php
-    // "php.validate.executablePath": "C:\\bin-programs\\php\\php8.0.8\\php.exe",
+    "php.validate.executablePath": "C:\\bin-programs\\php\\php8.0.8\\php.exe",
 
     // -- cross-platform extras --
 
+    // Gitlens
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
+    "gitlens.defaultDateFormat": null,
+    "gitlens.hovers.annotations.enabled": false,
+    "gitlens.hovers.enabled": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": true
+    },
+
+
     // vscodevim
-    "vim.useSystemClipboard": true,
-    "vim.foldfix": true,
+    "vim.useSystemClipboard"    : true,
+    "vim.foldfix"               : true,
     "vim.camelCaseMotion.enable": true,
-    "vim.whichwrap": "h,l,<,>,[,]",
-    "vim.handleKeys": {
-        "<C-c>": false,
-        "<C-s>": false,
-        "<C-S>": false,
-        "<C-w>": false,
-        "<C-f>": false,
-        "<C-t>": false,
-        "<C-n>": false,
-        "<C-u>": false,
-        "<C-i>": false,
+    "vim.whichwrap"             : "h,l,<,>,[,]",
+    "vim.handleKeys"            : {
+        "<C-c>"  : false,
+        "<C-s>"  : false,
+        "<C-S>"  : false,
+        "<C-w>"  : false,
+        "<C-f>"  : false,
+        "<C-t>"  : false,
+        "<C-n>"  : false,
+        "<C-u>"  : false,
+        "<C-i>"  : false,
         "<Enter>": false
     },
     "vim.normalModeKeyBindings": [
         {
             "before": ["J"],
-            "after": ["j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j"]
+            "after" : ["j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j"]
         },
         {
             "before": ["K"],
-            "after": ["k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k"]
+            "after" : ["k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k"]
         },
         {
-            "before": ["<Space>"],
+            "before"  : ["<Space>"],
             "commands": ["editor.toggleFold"],
         },
     ],
     "vim.insertModeKeyBindings": [
         {
             "before": ["k", "j"],
-            "after": ["<Esc>"]
+            "after" : ["<Esc>"]
         },
         {
             "before": ["j", "k"],
-            "after": ["<Esc>"]
+            "after" : ["<Esc>"]
         }
     ],
     "vim.visualModeKeyBindings": [
@@ -341,17 +398,18 @@
         },
     ],
 
+
     // spell checker
-    "cSpell.enabled": true,
-    "cSpell.diagnosticLevel": "Hint",
-    "cSpell.spellCheckDelayMs": 500,
-    "cSpell.showStatus": true,
-    "cSpell.allowCompoundWords": false,
-    "cSpell.language": "en",
+    "cSpell.enabled"            : true,
+    "cSpell.showStatus"         : true,
+    "cSpell.language"           : "en",
+    "cSpell.diagnosticLevel"    : "Hint",
+    "cSpell.allowCompoundWords" : false,
+    "cSpell.spellCheckDelayMs"  : 500,
     "cSpell.maxNumberOfProblems": 100,
-    "cSpell.numSuggestions": 8,
-    "cSpell.minWordLength": 4,
-    "cSpell.enabledLanguageIds": [
+    "cSpell.numSuggestions"     : 8,
+    "cSpell.minWordLength"      : 4,
+    "cSpell.enabledLanguageIds" : [
         "csharp",
         "go",
         "javascript",
@@ -364,67 +422,113 @@
         "yml"
     ],
     "cSpell.ignorePaths": [
+        "*.dll",
+        ".git",
         "node_modules",
         "vscode-extension",
-        ".git",
-        "*.dll",
     ],
     "cSpell.userWords": [
+        "Acode",
         "acronis",
+        "adblocking",
+        "ADCS",
         "adhd",
+        "Adoptium",
+        "airpods",
         "alsa",
+        "amazfit",
         "andotp",
         "Anki",
         "anonymization",
         "Anonymizing",
+        "Antimine",
         "APIPA",
         "Appium",
+        "archivable",
         "Artix",
         "Audacium",
+        "audiobook",
         "Avaya",
+        "AVMA",
+        "AYCE",
         "azuread",
+        "Backblaze",
+        "Backburner",
         "backdoors",
+        "Backlinking",
         "backuppc",
+        "balena",
         "baremetal",
         "bareos",
+        "bitlocker",
         "bitwarden",
         "biztalk",
         "blazor",
         "bootloader",
+        "bossanova",
         "Brainz",
         "BTFO",
         "btrfs",
         "Buku",
         "Bukubrow",
         "bytecode",
+        "cals",
         "CCNA",
+        "Censys",
         "centos",
+        "ceph",
+        "Certbot",
+        "Cfbr",
         "Chainable",
         "Cheapos",
+        "cheatsheet",
         "cicd",
         "circleci",
+        "Clearlake",
+        "Clonezilla",
+        "CMDB",
+        "cnames",
         "codium",
         "commandlet",
         "commandline",
         "conntrackd",
+        "corosync",
+        "Coursera",
+        "craigslist",
+        "Crowdsourced",
         "cybersec",
         "Daisychain",
         "Dbeaver",
+        "dcfldd",
         "ddos",
+        "ddrescue",
+        "debsecan",
+        "debsums",
         "Decentraleyes",
         "deduplicated",
+        "dendron",
+        "Deno",
         "deque",
         "desaturation",
         "devtest",
         "devuan",
         "dhcpd",
         "directx",
+        "Discoverability",
+        "diskspd",
         "Distro",
+        "Distrobox",
         "distros",
+        "dkms",
         "DLNA",
+        "dmarc",
+        "dnat",
+        "dnsmasq",
         "dockerfiles",
         "Doku",
+        "Domotz",
         "dotfile",
+        "dotfiles",
         "doxygen",
         "dpapi",
         "dploy",
@@ -432,20 +536,44 @@
         "dunders",
         "duplicacy",
         "ECMS",
+        "edshelton",
+        "edsheltonorg",
+        "EJBCA",
+        "emojisense",
+        "entra",
+        "ERSPAN",
+        "Espanso",
+        "ESXI",
+        "evilginx",
         "EXIF",
         "exiftool",
         "fakeroot",
         "Fargate",
         "FEMA",
         "Feynmen",
+        "fileless",
+        "filesize",
         "fips",
+        "Fortiswitch",
         "FOSS",
+        "freeipa",
+        "freenas",
         "freetube",
+        "frogwizard",
+        "fsfreezes",
+        "ftpd",
         "Gamification",
+        "gecos",
         "Gfci",
         "gifs",
         "gitea",
         "Gitlab",
+        "glock",
+        "Glpi",
+        "GMSA",
+        "goalert",
+        "Goodtime",
+        "gpio",
         "graalvm",
         "Grafana",
         "graphene",
@@ -458,19 +586,32 @@
         "HAXM",
         "heapq",
         "Helpdesk",
+        "Homelab",
         "hostable",
+        "Hostinger",
         "Hotspot",
         "hsts",
+        "Hunner",
         "huntgroup",
         "hyperv",
+        "ifttt",
+        "inator",
         "Inkscape",
+        "innodb",
         "Intellij",
         "Intune",
+        "iometer",
+        "Iosevka",
         "IPAM",
+        "ipcalc",
         "ipkvm",
+        "iscsi",
+        "iser",
+        "ITAD",
         "ITIL",
         "jdbc",
         "Jellyfin",
+        "journaling",
         "jpackage",
         "jtag",
         "jumpbox",
@@ -486,39 +627,57 @@
         "killall",
         "Kimai",
         "Konica",
+        "Koodo",
         "kopia",
         "Krita",
         "Ksnip",
         "kubernetes",
+        "kuma",
         "kwargs",
+        "lacp",
+        "laracasts",
         "laravel",
         "LARPing",
+        "letsencrypt",
         "libapache",
         "libc",
         "Libet",
         "libgd",
         "librenms",
+        "Librera",
         "libssl",
         "Linphone",
         "liquibase",
         "livestreaming",
         "livestreams",
+        "lldp",
         "losslessly",
         "LUKS",
+        "lynis",
         "Lynnfield",
         "Macbook",
         "macos",
         "Mailcow",
+        "Markor",
         "marp",
         "mbuffer",
         "Mckeown",
+        "meds",
+        "mellanox",
         "MELPA",
         "memdbg",
         "Meraki",
+        "mergerfs",
+        "Meshcentral",
         "miata",
         "microcontrollers",
+        "microtik",
+        "Miniconda",
+        "minio",
+        "Mitigations",
         "MITM",
         "Mixxx",
+        "mkdocs",
         "Monolta",
         "Motioneye",
         "mspaint",
@@ -529,71 +688,113 @@
         "multicloud",
         "multiset",
         "Multiversion",
+        "munin",
         "muxing",
         "MVCC",
         "mvvm",
+        "Myphpadmin",
+        "Mysqladmin",
         "NACL",
+        "Nakivo",
+        "ncdu",
+        "needrestart",
+        "NEET",
         "netboot",
         "netbox",
+        "netflow",
+        "Netplan",
         "nextcloud",
+        "nics",
         "nikes",
         "Nikto",
+        "Ning",
         "Nitrokey",
         "NLVE",
+        "nmap",
         "Nonactionable",
         "nosql",
         "NSSM",
         "NTFS",
         "Nullpomino",
         "nvim",
+        "Nvme",
         "ocsp",
         "Okular",
+        "omada",
+        "Omsa",
         "onedrive",
         "Onlykey",
         "ONVIF",
         "opensource",
         "Optiplex",
+        "orbi",
         "ordereddict",
         "osascript",
+        "osticket",
         "overcommit",
         "Owasp",
+        "Packetfence",
         "pacman",
+        "padfolio",
         "pandoc",
         "Papercut",
+        "paperduty",
+        "Paravirtualization",
+        "pathed",
         "Pathing",
         "Pavucontrol",
+        "PCAP",
         "PDFs",
         "pdftk",
+        "Pdroid",
+        "Pentesting",
+        "Percona",
         "pfsense",
         "pfsync",
+        "photoprism",
+        "pico",
+        "pihole",
+        "pilonidal",
+        "Pkcs",
         "Pkill",
         "platformio",
         "Plex",
+        "Pluralsight",
         "PMBAK",
         "PMBOK",
         "Podder",
+        "pokemmo",
         "Polycom",
         "pomodoro",
+        "pomodoros",
         "Pomotroid",
         "POSIX",
         "Postgresql",
         "postwhite",
         "poweradmin",
+        "powerbi",
         "powerdns",
         "Prereqs",
         "Promtail",
         "Pseudonymization",
         "pulseaudio",
+        "Pulumi",
         "Puyo",
+        "pynetbox",
         "pyside",
         "Pytest",
         "Qalculate",
         "qbit",
         "qbittorrent",
         "qdirstat",
+        "Qotom",
+        "quic",
+        "Quickbooks",
+        "RACI",
         "rackmount",
         "rclone",
         "RDBMS",
+        "rdma",
         "readline",
         "recursor",
         "Redist",
@@ -603,30 +804,61 @@
         "replaygain",
         "Restic",
         "Retroarch",
+        "rgba",
         "RHCSA",
+        "rkhunter",
+        "rmmagent",
         "roadmap",
         "routable",
         "RSAT",
+        "rspamd",
         "rssguard",
         "rtmp",
         "rtti",
         "Runbook",
         "Runbooks",
+        "rundeck",
         "runtimes",
         "sata",
         "Savapage",
+        "Savill",
+        "SCCM",
+        "schemaless",
+        "SCIF",
+        "selfcert",
+        "sendgrid",
         "Shaarli",
         "sharepoint",
         "Sharepoint",
         "SIEM",
+        "SIPC",
+        "Sipcalc",
         "slidedeck",
+        "Smallstep",
+        "snapraid",
+        "Snapseed",
+        "snat",
         "snds",
         "SNMP",
         "Softphone",
+        "sonatypes",
+        "soundfont",
+        "soundfonts",
+        "Spamassassin",
+        "SPLA",
+        "Spotube",
+        "sshfs",
+        "SSTP",
+        "starwind",
+        "Stax",
         "stdlib",
         "Steelcase",
+        "strat",
+        "Strats",
+        "streamlabs",
         "subclassing",
         "subvolumes",
+        "superscope",
         "surebackup",
         "Suricata",
         "sxhkd",
@@ -634,19 +866,30 @@
         "syncplay",
         "syncthing",
         "sysinternal",
+        "Systemwide",
         "Syuu",
+        "tacticalrmm",
+        "Tailscale",
         "taskwarrior",
         "teamviewer",
         "telehealth",
+        "Termux",
         "Tesseract",
         "testdisk",
         "Tetris",
         "Texlive",
+        "timeboxing",
         "timewarrior",
+        "tinytext",
+        "TOTP",
         "Tracerpt",
         "traefik",
         "travisci",
+        "truenas",
+        "Tubebuddy",
+        "ubiquiti",
         "ublock",
+        "uncategorized",
         "Unifi",
         "Unmanaged",
         "Unpatched",
@@ -654,20 +897,26 @@
         "USBC",
         "usermod",
         "usql",
+        "Vaultwarden",
         "veeam",
         "Ventoy",
         "Veracrypt",
         "VESA",
         "Vimium",
+        "virtio",
         "Virtualbox",
         "Visio",
+        "VMFXX",
         "VPNs",
         "vscodium",
         "vuln",
+        "VXLAN",
         "walkthrough",
         "Wallabag",
         "Wayback",
         "Wazuh",
+        "webdev",
+        "webmin",
         "websockets",
         "whitebox",
         "wincdemu",
@@ -677,14 +926,21 @@
         "winscp",
         "Wireshark",
         "wwyd",
+        "xdebug",
         "XMPP",
         "Xournalpp",
+        "xrdp",
         "xtrabackup",
+        "Xtreme",
         "yandere",
+        "ynab",
         "Youtube",
         "Zabbix",
         "Zammad",
-        "Zenmap"
+        "Zenmap",
+        "Zenni"
     ],
-    "window.zoomLevel": -1,
+    "workbench.colorTheme": "Default Dark+",
+    "git.enableSmartCommit": true,
+
 }

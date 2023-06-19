@@ -4,89 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Compile Markdown (markdown-it)",
+            "label": "echo",
             "type": "shell",
-            "command": "markdown-it",
-            "options": {
-                "cwd": "${workspaceFolder}",
-            },
-            "args": [
-                "'${relativeFile}'",
-                 "-o",
-                 "'html${pathSeparator}${fileBasenameNoExtension}.html'"
-                 ],
-             "group": {
-                "kind": "build",
-                // "isDefault": true
-             },
-        },
-        {
-            "label": "Compile Markdown New",
-            "type": "shell",
-            "options": {
-                    "cwd": "${fileDirname}"
-            },
-            "command": "pandoc",
-            "args": [
-                "-c", "dark-theme.css",
-                "--metadata", "title=\"${fileBasenameNoExtension}\"",
-                "--toc",
-                "--self-contained",
-                "${fileBasename}",
-                "-o", "${fileBasenameNoExtension}.html"
-            ],
-            "group": "build",
-            "problemMatcher": []
-        },
-        {
-            "label": "Compile Beamer New",
-            "type": "shell",
-            "options": {
-                    "cwd": "${fileDirname}"
-            },
-            "command": "pandoc",
-            "args": [
-                "-H", "style.pandoc",
-                "--pdf-engine=xelatex",
-                "-t", "beamer",
-                "-V", "fontsize=12pt",
-                "--slide-level", "2",
-                "-f", "markdown+implicit_figures",
-                "${fileBasename}",
-                "-o", "${fileBasenameNoExtension}.pdf",
-            ],
-            "group": "build",
-            "problemMatcher": []
-        },
-        {
-            "label": "cmdR-1",
-            "command": "${command:workbench.action.toggleMaximizedPanel}"
-        },
-        {
-            "label": "cmdR-2",
-            "command": "${command:workbench.action.terminal.focus}"
-        },
-        {
-            "label": "cmdR-3",
-            "command": "${command:workbench.action.focusActiveEditorGroup}"
-        },
-        {
-            "label": "cmdR-All",
-            "dependsOrder": "sequence",
-            "dependsOn": [
-                "cmdR-1",
-                "cmdR-2"
-            ],
-            "problemMatcher": []
-        },
-        {
-            "label": "cmdR-All-alt",
-            "dependsOrder": "sequence",
-            "dependsOn": [
-                "cmdR-1",
-                "cmdR-3"
-            ],
-            "problemMatcher": []
+            "command": "echo Hello"
         }
     ]
 }
