@@ -36,32 +36,46 @@
     // terminal behavior
     "terminal.integrated.cwd"                           : "",
     "powershell.integratedConsole.suppressStartupBanner": true,
-    "terminal.integrated.scrollback"                    : 1000,
-
-    // editor font behavior
-    "window.zoomLevel"    : -1,
+    "terminal.integrated.scrollback": 1000,
     "editor.links"        : true,
     "editor.fontLigatures": false,
     "editor.fontWeight"   : 300,
-    "editor.fontFamily"   : "JetBrains Mono",   // Normal
-    "editor.fontSize"     : 14,                 // Normal
-    "editor.lineHeight"   : 1.4,                // Normal
-    // "editor.fontFamily"   : "JetBrains Mono",   // Small
-    // "editor.fontSize"     : 12,                 // Small
-    // "editor.lineHeight"   : 1.5,                // Small
-    // "editor.fontFamily"   : "Iosevka SS14",     // Normal Condensed Width
-    // "editor.fontSize"     : 14,                 // Normal Condensed Width
-    // "editor.lineHeight"   : 1.5,                // Normal Condensed Width
-    // "editor.fontFamily"   : "JetBrains Mono",   // Presentation
-    // "editor.fontSize"     : 16,                 // Presentation
-    // "editor.lineHeight"   : 1.6,                // Presentation
-    // "window.zoomLevel"    : 1,                  // Presentation
+    // "editor.fontFamily": "JetBrains Mono",   // Normal
+    // "editor.fontSize"  : 14,                 // Normal
+    // "editor.lineHeight": 1.4,                // Normal
+    // "editor.fontFamily": "Comic Mono",       // Silly Condensed
+    // "editor.fontSize"  : 14,                 // Silly Condensed
+    // "editor.lineHeight": 1.4,                // Silly Condensed
+    "editor.fontFamily": "Comic Mono",       // Silly
+    "editor.fontSize"  : 16,                 // Silly
+    "editor.lineHeight": 1.4,                // Silly
+    // "editor.fontFamily": "JetBrains Mono",   // Small
+    // "editor.fontSize"  : 12,                 // Small
+    // "editor.lineHeight": 1.5,                // Small
+    // "editor.fontFamily": "Iosevka SS14",     // Normal Condensed Width
+    // "editor.fontSize"  : 14,                 // Normal Condensed Width
+    // "editor.lineHeight": 1.5,                // Normal Condensed Width
+    // "editor.fontFamily": "JetBrains Mono",   // Presentation
+    // "editor.fontSize"  : 16,                 // Presentation
+    // "editor.lineHeight": 1.6,                // Presentation
+    // "editor.fontFamily": "Comic Mono",       // Silly Presentation
+    // "editor.fontSize"  : 18,                 // Silly Presentation
+    // "editor.lineHeight": 1.4,                // Silly Presentation
+    // "window.zoomLevel" : 1,                  // Presentation
 
     // terminal font behavior
-    "terminal.integrated.fontWeightBold": 500,
-    "terminal.integrated.fontWeight"    : 300,
-    "terminal.integrated.fontSize"      : 14,
-    "terminal.integrated.fontFamily"    : "JetBrains Mono",
+    // "terminal.integrated.fontWeightBold": 500,                // Normal
+    // "terminal.integrated.fontWeight"    : 300,                // Normal
+    // "terminal.integrated.fontSize"      : 14,                 // Normal
+    // "terminal.integrated.fontFamily"    : "JetBrains Mono",   // Normal
+    "terminal.integrated.fontWeightBold": 500,                // Silly
+    "terminal.integrated.fontWeight"    : 300,                // Silly
+    "terminal.integrated.fontSize"      : 16,                 // Silly
+    "terminal.integrated.fontFamily"    : "Comic Mono",       // Silly
+    // "terminal.integrated.fontWeightBold": 500,          // Silly Presentation
+    // "terminal.integrated.fontWeight"    : 300,          // Silly Presentation
+    // "terminal.integrated.fontSize"      : 18,           // Silly Presentation
+    // "terminal.integrated.fontFamily"    : "Comic Mono", // Silly Presentation
 
     // output behavior
     "output.smartScroll.enabled": true,
@@ -83,17 +97,14 @@
     ],
     "editor.wordWrap"               : "wordWrapColumn",
     "window.openFoldersInNewWindow" : "on",
-    "window.restoreWindows"         : "preserve",
-    "workbench.editor.untitled.hint": "hidden",
+    "window.restoreWindows": "preserve",
     "workbench.editor.tabSizing"    : "fit",
     // "editor.guides.bracketPairs"              : true,
     // "editor.guides.highlightActiveIndentation": true,
 
     // explorer tree
-    "workbench.tree.indent": 12,
-
-    // theme
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.tree.indent": 16,
+    "workbench.tree.renderIndentGuides": "always",
     "workbench.colorCustomizations": {
         "[Default Dark+]": {
             "editorHint.border"            : "#ff426bbf",
@@ -179,7 +190,7 @@
     },
 
     "pasteImage.defaultName"            : "[image-]YYYYMMDDHHmmss",
-    "pasteImage.insertPattern"          : "<img src=\"${currentFileName}-media/${imageFileName}\" alt=\"drawing\" width=\"50\" />",
+    // "pasteImage.insertPattern"          : "<img src=\"${currentFileName}-media/${imageFileName}\" alt=\"drawing\" width=\"50\" />",
     "pasteImage.path"                   : "${currentFileDir}/${currentFileName}-media",
     "pasteImage.basePath"               : "${currentFileDir}",
     "pasteImage.forceUnixStyleSeparator": true,
@@ -264,17 +275,6 @@
     // platform.io
     "platformio-ide.activateOnlyOnPlatformIOProject": true,
 
-    // C#
-    "csharp.inlayHints.types.enabled": true,
-    "csharp.inlayHints.parameters.forLiteralParameters": true,
-    "csharp.inlayHints.parameters.forIndexerParameters": true,
-    "csharp.inlayHints.parameters.forObjectCreationParameters": true,
-    "csharp.inlayHints.parameters.forOtherParameters": true,
-    "csharp.inlayHints.types.forImplicitObjectCreation": true,
-    "csharp.inlayHints.types.forImplicitVariableTypes": true,
-    "csharp.inlayHints.types.forLambdaParameterTypes": true,
-    "csharp.inlayHints.parameters.enabled": true,
-
     // Python
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.variableTypes": true,
@@ -358,11 +358,11 @@
     "vim.normalModeKeyBindings": [
         {
             "before": ["J"],
-            "after" : ["j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j"]
+            "after" : ["1", "4", "j"]
         },
         {
             "before": ["K"],
-            "after" : ["k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k", "k"]
+            "after" : ["1", "4", "k"]
         },
         {
             "before"  : ["<Space>"],
@@ -395,6 +395,14 @@
             "commands": [
                 "editor.action.outdentLines"
             ]
+        },
+        {
+            "before": ["J"],
+            "after" : ["1", "4", "j"]
+        },
+        {
+            "before": ["K"],
+            "after" : ["1", "4", "k"]
         },
     ],
 
@@ -434,9 +442,11 @@
         "ADCS",
         "adhd",
         "Adoptium",
+        "ADUC",
         "airpods",
         "alsa",
         "amazfit",
+        "amorphic",
         "andotp",
         "Anki",
         "anonymization",
@@ -446,8 +456,14 @@
         "Appium",
         "archivable",
         "Artix",
+        "Asesprite",
+        "aspnet",
         "Audacium",
         "audiobook",
+        "autogrowth",
+        "autowire",
+        "autowired",
+        "autowiring",
         "Avaya",
         "AVMA",
         "AYCE",
@@ -460,6 +476,7 @@
         "balena",
         "baremetal",
         "bareos",
+        "Bidi",
         "bitlocker",
         "bitwarden",
         "biztalk",
@@ -469,6 +486,7 @@
         "Brainz",
         "BTFO",
         "btrfs",
+        "budibase",
         "Buku",
         "Bukubrow",
         "bytecode",
@@ -479,9 +497,11 @@
         "ceph",
         "Certbot",
         "Cfbr",
+        "CGNAT",
         "Chainable",
         "Cheapos",
         "cheatsheet",
+        "Checkmarx",
         "cicd",
         "circleci",
         "Clearlake",
@@ -491,15 +511,21 @@
         "codium",
         "commandlet",
         "commandline",
+        "CONCAT",
         "conntrackd",
+        "containerd",
         "corosync",
         "Coursera",
+        "cout",
         "craigslist",
         "Crowdsourced",
+        "Cyberduck",
         "cybersec",
         "Daisychain",
+        "datagrip",
         "Dbeaver",
         "dcfldd",
+        "DDIA",
         "ddos",
         "ddrescue",
         "debsecan",
@@ -512,7 +538,9 @@
         "desaturation",
         "devtest",
         "devuan",
+        "DFLT",
         "dhcpd",
+        "dhcpv",
         "directx",
         "Discoverability",
         "diskspd",
@@ -525,6 +553,7 @@
         "dnat",
         "dnsmasq",
         "dockerfiles",
+        "dogfooding",
         "Doku",
         "Domotz",
         "dotfile",
@@ -533,6 +562,7 @@
         "dpapi",
         "dploy",
         "Drac",
+        "DUID",
         "dunders",
         "duplicacy",
         "ECMS",
@@ -540,6 +570,7 @@
         "edsheltonorg",
         "EJBCA",
         "emojisense",
+        "endl",
         "entra",
         "ERSPAN",
         "Espanso",
@@ -549,8 +580,10 @@
         "exiftool",
         "fakeroot",
         "Fargate",
+        "Feedbro",
         "FEMA",
         "Feynmen",
+        "Filegroup",
         "fileless",
         "filesize",
         "fips",
@@ -565,9 +598,12 @@
         "Gamification",
         "gecos",
         "Gfci",
+        "Ghidra",
         "gifs",
+        "giscus",
         "gitea",
         "Gitlab",
+        "glightbox",
         "glock",
         "Glpi",
         "GMSA",
@@ -579,10 +615,12 @@
         "graphene",
         "Graphviz",
         "greylisting",
+        "HADR",
         "Hamcrest",
         "hansei",
         "Hardphone",
         "hashicorp",
+        "Hashtable",
         "HAXM",
         "heapq",
         "Helpdesk",
@@ -594,7 +632,12 @@
         "Hunner",
         "huntgroup",
         "hyperv",
+        "HYSA",
+        "IAID",
+        "Iconizer",
+        "ideavimrc",
         "ifttt",
+        "iname",
         "inator",
         "Inkscape",
         "innodb",
@@ -602,15 +645,21 @@
         "Intune",
         "iometer",
         "Iosevka",
+        "iostream",
         "IPAM",
         "ipcalc",
         "ipkvm",
+        "Ipsums",
+        "ISATAP",
         "iscsi",
         "iser",
         "ITAD",
         "ITIL",
+        "jackiexiao",
         "jdbc",
         "Jellyfin",
+        "Jeong",
+        "jetbrains",
         "journaling",
         "jpackage",
         "jtag",
@@ -623,12 +672,14 @@
         "Kdenlive",
         "Keepass",
         "keybind",
+        "keybinds",
         "keychain",
         "killall",
         "Kimai",
         "Konica",
         "Koodo",
         "kopia",
+        "Krabappel",
         "Krita",
         "Ksnip",
         "kubernetes",
@@ -638,6 +689,7 @@
         "laracasts",
         "laravel",
         "LARPing",
+        "learncpp",
         "letsencrypt",
         "libapache",
         "libc",
@@ -647,10 +699,13 @@
         "Librera",
         "libssl",
         "Linphone",
+        "LINQ",
         "liquibase",
         "livestreaming",
         "livestreams",
         "lldp",
+        "localxpose",
+        "Logseq",
         "losslessly",
         "LUKS",
         "lynis",
@@ -674,12 +729,14 @@
         "microtik",
         "Miniconda",
         "minio",
+        "Minto",
         "Mitigations",
         "MITM",
         "Mixxx",
         "mkdocs",
         "Monolta",
         "Motioneye",
+        "msdb",
         "mspaint",
         "MSVC",
         "MSVCC",
@@ -718,7 +775,9 @@
         "Nullpomino",
         "nvim",
         "Nvme",
+        "nxlog",
         "ocsp",
+        "ODBC",
         "Okular",
         "omada",
         "Omsa",
@@ -748,6 +807,7 @@
         "pdftk",
         "Pdroid",
         "Pentesting",
+        "Peopleware",
         "Percona",
         "pfsense",
         "pfsync",
@@ -774,7 +834,9 @@
         "poweradmin",
         "powerbi",
         "powerdns",
+        "prebuild",
         "Prereqs",
+        "processname",
         "Promtail",
         "Pseudonymization",
         "pulseaudio",
@@ -796,19 +858,26 @@
         "RDBMS",
         "rdma",
         "readline",
+        "readtime",
         "recursor",
         "Redist",
+        "Redistributable",
         "Reimage",
         "remotable",
         "remoting",
         "replaygain",
+        "Resharper",
         "Restic",
+        "resx",
         "Retroarch",
         "rgba",
         "RHCSA",
+        "ripgrep",
         "rkhunter",
         "rmmagent",
         "roadmap",
+        "roadmapsh",
+        "roamlinks",
         "routable",
         "RSAT",
         "rspamd",
@@ -825,16 +894,22 @@
         "SCCM",
         "schemaless",
         "SCIF",
+        "Scroller",
+        "SDLC",
         "selfcert",
         "sendgrid",
         "Shaarli",
         "sharepoint",
         "Sharepoint",
         "SIEM",
+        "SIIT",
         "SIPC",
         "Sipcalc",
+        "SLAAC",
         "slidedeck",
+        "slnf",
         "Smallstep",
+        "smartmontools",
         "snapraid",
         "Snapseed",
         "snat",
@@ -844,10 +919,14 @@
         "sonatypes",
         "soundfont",
         "soundfonts",
+        "Soundux",
         "Spamassassin",
         "SPLA",
+        "Spleeter",
         "Spotube",
+        "SQLCMD",
         "sshfs",
+        "SSMS",
         "SSTP",
         "starwind",
         "Stax",
@@ -856,8 +935,11 @@
         "strat",
         "Strats",
         "streamlabs",
+        "Struct",
         "subclassing",
+        "Subconcept",
         "subvolumes",
+        "subword",
         "superscope",
         "surebackup",
         "Suricata",
@@ -865,22 +947,27 @@
         "symlinking",
         "syncplay",
         "syncthing",
+        "sysbench",
         "sysinternal",
         "Systemwide",
         "Syuu",
+        "Tabify",
         "tacticalrmm",
         "Tailscale",
         "taskwarrior",
         "teamviewer",
         "telehealth",
+        "tempdb",
         "Termux",
         "Tesseract",
         "testdisk",
         "Tetris",
         "Texlive",
+        "thingee",
         "timeboxing",
         "timewarrior",
         "tinytext",
+        "todos",
         "TOTP",
         "Tracerpt",
         "traefik",
@@ -893,22 +980,29 @@
         "Unifi",
         "Unmanaged",
         "Unpatched",
+        "Untabify",
         "urbackup",
         "USBC",
         "usermod",
+        "Userscripts",
         "usql",
+        "Vardecimal",
         "Vaultwarden",
         "veeam",
         "Ventoy",
         "Veracrypt",
         "VESA",
+        "viewstate",
         "Vimium",
+        "Violentmonkey",
         "virtio",
         "Virtualbox",
         "Visio",
         "VMFXX",
         "VPNs",
         "vscodium",
+        "vsvim",
+        "vsvimrc",
         "vuln",
         "VXLAN",
         "walkthrough",
@@ -916,9 +1010,14 @@
         "Wayback",
         "Wazuh",
         "webdev",
+        "webforms",
+        "webgrease",
         "webmin",
+        "webservers",
         "websockets",
         "whitebox",
+        "wikilink",
+        "wikilinks",
         "wincdemu",
         "windirstat",
         "winfsp",
@@ -926,21 +1025,56 @@
         "winscp",
         "Wireshark",
         "wwyd",
+        "xact",
         "xdebug",
+        "XMLA",
         "XMPP",
         "Xournalpp",
         "xrdp",
         "xtrabackup",
         "Xtreme",
         "yandere",
+        "ycsb",
         "ynab",
         "Youtube",
         "Zabbix",
+        "Zahirah",
         "Zammad",
         "Zenmap",
-        "Zenni"
+        "Zenni",
+        "Zettelkasten"
     ],
-    "workbench.colorTheme": "Default Dark+",
     "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "livePreview.notifyOnOpenLooseFile": false,
+    "workbench.colorTheme": "Default Dark+",
+    "hediet.vscode-drawio.resizeImages": null,
+    "dotnet.inlayHints.enableInlayHintsForParameters": true,
+    "dotnet.inlayHints.enableInlayHintsForLiteralParameters": true,
+    "dotnet.inlayHints.enableInlayHintsForIndexerParameters": true,
+    "dotnet.inlayHints.enableInlayHintsForObjectCreationParameters": true,
+    "dotnet.inlayHints.enableInlayHintsForOtherParameters": true,
+    "csharp.inlayHints.enableInlayHintsForTypes": true,
+    "csharp.inlayHints.enableInlayHintsForImplicitVariableTypes": true,
+    "csharp.inlayHints.enableInlayHintsForLambdaParameterTypes": true,
+    "csharp.inlayHints.enableInlayHintsForImplicitObjectCreation": true,
+    "explorer.confirmDragAndDrop": false,
+    "rss.accounts": {
+        "72ce7560-5021-11ee-989b-2b86ec1ccaec": {
+            "name": "Default",
+            "type": "local",
+            "feeds": [
+                "https://edshelton.org/feed_rss_created.xml"
+            ]
+        }
+    },
+    "window.zoomLevel": -1,
+    "workbench.iconTheme": "material-icon-theme",
+    "polyglot-notebook.defaultNotebookExtension": ".ipynb",
+    "polyglot-notebook.defaultNotebookLanguage": "csharp",
+    "workbench.editor.empty.hint": "hidden",
+    "[java][markdown][org][plaintext]": {
+        "editor.wordBasedSuggestions": "off"
+    },
 
 }

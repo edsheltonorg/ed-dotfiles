@@ -1,0 +1,6 @@
+set clipboard=unnamed
+set ignorecase
+nnoremap J 14j
+vnoremap J 14j
+nnoremap K 14k
+vnoremap K 14k

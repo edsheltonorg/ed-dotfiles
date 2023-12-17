@@ -1,41 +1,66 @@
-#w::Run, "C:\Program Files\Mozilla Firefox\firefox.exe"
-#e::Run explorer.exe "D:\"
-#+e::Run explorer.exe "C:\Users\ed\"
+; ; Disabling Numpad
+; *Numpad0::Return
+; *Numpad1::Return
+; *Numpad2::Return
+; *Numpad3::Return
+; *Numpad4::Return
+; *Numpad5::Return
+; *Numpad6::Return
+; *Numpad7::Return
+; *Numpad8::Return
+; *Numpad9::Return
+; *NumpadDot::Return
+; *NumpadEnter::Return
+; *NumpadDiv::Return
+; *NumpadMult::Return
+; *NumpadAdd::Return
+; *NumpadSub::Return
+; *NumpadIns::Return
+; *NumpadDown::Return
+; *NumpadLeft::Return
+; *NumpadClear::Return
+; *NumpadRight::Return
+; *NumpadUp::Return
+; *NumpadDel::Return
+; *NumpadPgUp::Return
+; *NumpadPgDn::Return
+; *NumpadHome::Return
+; *NumpadEnd::Return
 
-; Disabling Numpad
-*Numpad0::Return
-*Numpad1::Return
-*Numpad2::Return
-*Numpad3::Return
-*Numpad4::Return
-*Numpad5::Return
-*Numpad6::Return
-*Numpad7::Return
-*Numpad8::Return
-*Numpad9::Return
-*NumpadDot::Return
-*NumpadDiv::Return
-*NumpadMult::Return
-*NumpadAdd::Return
-*NumpadSub::Return
-*NumpadEnter::Return
-*NumpadIns::Return
-*NumpadDown::Return
-*NumpadLeft::Return
-*NumpadClear::Return
-*NumpadRight::Return
-*NumpadUp::Return
-*NumpadDel::Return
-*NumpadPgUp::Return
-*NumpadPgDn::Return
-*NumpadHome::Return
-*NumpadEnd::Return
+; Macro Numpad
+*Numpad0::f20
+*NumpadIns::f20
+*Numpad1::f21
+*NumpadEnd::f21
+*Numpad2::f22
+*NumpadDown::f22
+*Numpad3::f13
+*NumpadPgDn::f13
+*Numpad4::f14
+*NumpadLeft::f14
+*Numpad5::f15
+*NumpadClear::f15
+*Numpad6::f16
+*NumpadRight::f16
+*Numpad7::f17
+*NumpadHome::f17
+*Numpad8::f18
+*NumpadUp::f18
+*Numpad9::f19
+*NumpadPgUp::f19
+*NumpadDot::f23
+*NumpadDel::f23
+*NumpadEnter::f24
+*NumpadDiv::+f13
+*NumpadMult::+f14
+*NumpadSub::+f15
+*NumpadAdd::+f16
 
 ; set caps to ctrl
 CapsLock::Ctrl
 
 ; keep window on top
-^SPACE:: Winset, Alwaysontop, , A
+;LAlt & SPACE:: Winset, Alwaysontop, , A
 
 ; unbind right alt for use in custom keybinds listed below
 Ralt::return
