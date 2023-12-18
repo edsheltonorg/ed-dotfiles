@@ -1,0 +1,30 @@
+{
+  "keyMappings": "# unmap all not defined\nunmapAll\n\n# change keys to open new tab\nmap : Vomnibar.activateInNewTab\nmap p openCopiedUrlInNewTab\n\n# view source\nmap ? toggleViewSource\n\n# unmap for playback control\nunmap q\nunmap r\n\n# change insert to ; so tab movement acts same\nmap ; enterInsertMode\n\n# tab movement to u/i\nmap u previousTab\nmap i nextTab\nmap w previousTab\nmap e nextTab\n\n# history movement to cap u/i\nmap U goBack\nmap I goForward\nmap W goBack\nmap E goForward\n# go up in structure and root\nmap 7 goUp\nmap & goToRoot\n\n# open tab and edit url\nmap o createTab\nmap O Vomnibar.activateEditUrl\n\n# make f default to new tab; F to follow\nmap f LinkHints.activateModeToOpenInNewTab\nmap F LinkHints.activateModeToOpenInNewForegroundTab\nmap yF LinkHints.activateModeToCopyLinkUrl\n\n# close/restore tabs on pointer finger both sides\nmap n removeTab\nmap b removeTab\nmap N restoreTab\nmap B restoreTab\nmap T restoreTab\n\n# scroll left handed\nmap s scrollDown\nmap d scrollUp\n\n# scroll cap jump faster\nmap J scrollDown count=8\nmap K scrollUp count=8\nmap S scrollDown count=8\nmap D scrollUp count=8\n\nmap j scrollDown\nmap k scrollUp\nmap h scrollLeft\nmap l scrollRight\n\n# scroll all the way up and down\nmap gg scrollToTop\nmap G scrollToBottom\n\n# allow ' to jump mark like vim\nmap ' Marks.activateGotoMode\n\n# potential fix find not working\nmap . performFind\nmap , performBackwardsFind",
+  "settingsVersion": "2.0.6",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.freecodecamp.org/learn/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://excalidraw.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://docs.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://10.0.0.10:5000/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://10.0.0.10:5000/*"
+    }
+  ]
+}
